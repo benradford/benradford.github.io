@@ -200,10 +200,12 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 
 .entry-title {
     font-weight: 100;
+    text-align: left;
 }
 
 .entry-subtitle {
 	font-weight: 100;
+	text-align: left;
 }
 
 .main-header-image {
@@ -274,6 +276,7 @@ header .entry-meta {
 	article {
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
+		// box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
 		border-radius: 3px;
 		margin-bottom: 20px;
 		padding: 25px 15px;
