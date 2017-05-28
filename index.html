@@ -6,7 +6,11 @@ layout: post-index
     
     <!-- POST FEATURED IMAGE -->
     <div class="featured-image">
-    <img src="{{ post.featured-image}}" style="width:100%">
+    {% if post.featured-image == "" or post.featured-image == nil %}
+        <img src="/images/default-header.png", style="width:100%">
+    {% else %}
+        <img src="{{ post.featured-image }}" style="width:100%">
+    {% endif %}
     </div>
 
     <!-- POST TITLE -->

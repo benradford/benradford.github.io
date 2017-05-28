@@ -3,7 +3,6 @@ layout: post
 title: Mixtures of Linear Models
 subtitle: With example code in R.
 author: Benjamin J. Radford
-featured-image: /images/default-header.png
 tags: [data analysis, r]
 date-string: April 19, 2015
 ---

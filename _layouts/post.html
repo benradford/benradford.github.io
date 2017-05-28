@@ -43,7 +43,11 @@
         <article class="hentry">
 
             <div class="featured-image">
-            <img src="{{ page.featured-image}}" style="width:100%">
+                {% if page.featured-image == "" or page.featured-image == nil %}
+                    <img src="/images/default-header.png", style="width:100%">
+                {% else %}
+                    <img src="{{ page.featured-image }}" style="width:100%">
+                {% endif %}
             </div>
             
             <!-- MAIN -->
