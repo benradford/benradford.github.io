@@ -12,5 +12,5 @@ title: About
 Benjamin J. Radford is a Principal Data Scientist with Sotera Defense Solutions. He received his Ph.D. in Political Science from Duke University where he studied security, peace, & conflict and political methodology. He specializes in data science, cybersecurity, political forecasting, and arms proliferation.
 
 <center>
-    {% icon fa-camera-retro %}
+    {% icon github-alt %}
 </center>
