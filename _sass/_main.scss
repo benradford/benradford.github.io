@@ -283,7 +283,9 @@ header .entry-meta {
 		overflow: hidden;
 
 		@media #{$small} {
-		.featured-image {
+			padding: 25px 15px
+
+			.featured-image {
 				display:block;
 	        	margin:-25px -15px;
 	        	padding: 0px 0px 20px 0px;
