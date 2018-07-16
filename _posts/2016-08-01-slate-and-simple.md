@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Slate+Simple
-subtitle: A Jekyll theme with crsip typography and featured post images. 
+subtitle: A Jekyll theme with crisp typography and featured post images. 
 author: Benjamin J. Radford
 featured-image: 
 tags: [jekyll, github]
