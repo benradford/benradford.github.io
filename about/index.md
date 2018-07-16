@@ -18,11 +18,11 @@ title: About
 </p>
 
 <p>
-I am a quantitative social scientist and data scientist. I received my Ph.D. in Political Science from Duke University where I studied security, peace, conflict and political methodology. Currently, I work as a Principal Data Scientist with Sotera Defense Solutions on advanced research and development programs. I specialize in statistics, machine learning, cybersecurity, political forecasting, and arms proliferation.
+I am a quantitative social scientist and data scientist. I received my Ph.D. in Political Science from Duke University where I studied security, peace, conflict and political methodology. Currently, I work as a Principal Investigator and Principal Data Scientist for a cybersecurity program in the Information Innovation Office (I2O) of DARPA. I specialize in statistics, machine learning, cybersecurity, political forecasting, and arms proliferation.
 </p>
 
 <p>
-Myy publications and professional research experience can be found in my <a href="https://benradford.github.io/images/radford_cv.pdf">CV</a>.
+My publications and professional research experience can be found in my <a href="https://benradford.github.io/images/radford_cv.pdf">CV</a>.
 </p>
 
 <p>
