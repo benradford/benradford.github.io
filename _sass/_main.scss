@@ -261,8 +261,8 @@ header .entry-meta {
 		margin: 40px 2px 20px 2px;
 
 		@media #{$medium} {
-			margin-left: 20px;
-			margin-right: 20px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		@media #{$large} {
