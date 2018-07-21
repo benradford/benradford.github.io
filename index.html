@@ -23,14 +23,26 @@ layout: post-index
         </h3>
     </header>
 
+
+            <!-- POST BYLINE -->
+            <div class="post-byline">
+                <i>{{ post.venue }}</i> <br>
+                {{ post.author }} <br>
+                <a href="{{ page.link-download }}">{{ post.link-text }}</a>
+            </div><br>
+            <!-- POST DATE -->
+            <div class="post-date">
+                {{ post.date-string }}
+            </div>
+
     <!-- POST CONTENT -->
-<!--     <div class="entry-content">
-        {{ post.content }}
-    </div> -->
-    
+    <hr>
+    <div class="entry-content">
+        {{ post.excerpt }}
+    </div> 
+
     <!--- DIVIDING LINE -->
     <hr>
-    
     <!-- POST TAGS -->
     <div class="inline-tags">
         <span>
@@ -39,17 +51,7 @@ layout: post-index
         {% endfor %}
         </span>
     </div>
-    
-    <br>
-    
-    <!-- POST DATE -->
-    <div class="post-date">
-        <span class="entry-date date published updated">
-            <time datetime="{{ post.date | date_to_xmlschema }}">
-                <a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a>
-            </time>
-        </span>
-    </div>
+
     
 </article>
 {% endfor %}

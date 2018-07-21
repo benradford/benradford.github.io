@@ -177,11 +177,11 @@ svg:not(:root) {
     font-size: 14px;
 
     a {
-        color: #F2992E;
+        color: $highlight-color;
     }
     
     &:hover {
-        color: lighten(#F2992E,20);
+        color: lighten($highlight-color,20);
     }
 }
 
@@ -196,6 +196,9 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 .entry-content {
     font-size: 16px;
     line-height: 26px;
+    a{
+    	color: $highlight-color;
+    }
 }
 
 .entry-title {
@@ -243,6 +246,20 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
     
     a:hover{
         color: lighten($base-color,20);
+    }
+}
+
+.post-byline {
+    font-size: 12px;
+	text-transform: none;
+    color: lighten($base-color,0);
+
+	a {
+		color: lighten($highlight-color,0);
+	}
+    
+    a:hover{
+        color: lighten($highlight-color,20);
     }
 }
 

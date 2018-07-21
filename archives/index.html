@@ -7,14 +7,14 @@ title: Archives
         <a>{{ page.title }}</a>
     </h1>
     <hr>
-</article>
+<!--</article>-->
 
 {% for post in site.posts %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
     {% if forloop.first %}
-    <article>
+    <!--<article>-->
         <h1 class="entry-title">{{ this_year }}</h1>
       
         <ul>
@@ -25,14 +25,15 @@ title: Archives
     {% if forloop.last %}
     </ul>
         
-    </article>
+   <!-- </article>-->
     {% else %}
         {% if this_year != next_year %}
           </ul>
-        </article>
-        <article>
+        <!--</article>-->
+        <!--<article>-->
           <h1 id="{{ next_year }}-ref" class="entry-title">{{next_year}}</h1>
           <ul>
         {% endif %}
     {% endif %}
 {% endfor %}
+</article>
