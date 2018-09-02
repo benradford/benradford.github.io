@@ -1,0 +1,46 @@
+---
+layout: post-index
+title: Software
+---
+<article>
+    <h1 class="entry-title">
+        <a>{{ page.title }}</a>
+    </h1>
+    <hr>
+<!--</article>-->
+
+{% for post in site.categories.software %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <!--<article>-->
+        <h1 class="entry-title">{{ this_year }}</h1>
+      
+        <ul>
+        {% endif %}
+
+        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
+             <div class="post-byline">
+                 <i>{{ post.venue }}</i> <br>
+                {{ post.author }} <br>
+                <div class="post-date">
+                    {{ post.date-string }}
+                </div>
+        </li>
+
+    {% if forloop.last %}
+    </ul>
+        
+    <!--</article>-->
+    {% else %}
+        {% if this_year != next_year %}
+          </ul>
+        <!--</article>-->
+        <!--<article>-->
+          <h1 id="{{ next_year }}-ref" class="entry-title">{{next_year}}</h1>
+          <ul>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</article>
