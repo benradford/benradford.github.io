@@ -5,7 +5,7 @@ subtitle: A Jekyll theme with crisp typography and featured post images.
 author: Benjamin J. Radford
 featured-image: 
 tags: [jekyll, github]
-date-string: AUGUST 01, 2017
+date: 2017-08-01
 ---
 
 If you like the theme featured on this blog, you can use it too. I've published the theme at [https://github.com/benradford/Slate-and-Simple-Jekyll-Theme](https://github.com/benradford/Slate-and-Simple-Jekyll-Theme).

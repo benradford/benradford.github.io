@@ -32,7 +32,7 @@ layout: post-index
             </div><br>
             <!-- POST DATE -->
             <div class="post-date">
-                {{ post.date-string }}
+                {{ post.date | date: "%B %-d, %Y" }}
             </div>
 
     <!-- POST CONTENT -->

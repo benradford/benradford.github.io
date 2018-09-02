@@ -25,7 +25,7 @@ title: Publications
                  <i>{{ post.venue }}</i> <br>
                 {{ post.author }} <br>
                 <div class="post-date">
-                    {{ post.date-string }}
+                    {{ post.date | date: "%B %-d, %Y" }}
                 </div>
         </li>
 

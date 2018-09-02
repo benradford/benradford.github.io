@@ -5,7 +5,7 @@ subtitle:
 author: Benjamin J. Radford
 featured-image: /images/2015-06-18/bayesian_turtle.jpg
 tags: [statistics]
-date-string: June 18, 2015
+date: 2015-06-18
 ---
 
 Occasionally in political science, we run into problems in which we have a small dataset and a large array of possible of predictors. Choosing a parsimonious model can be difficult. When theory-based model selection is out of the question, automated variable selection allows us to estimate the probability that each predictor is included in the "true model." We can use these estimates to then prune our model. Here, I describe a Bayesian ordered probit regression model with stochastic search variable selection (SSVS).
