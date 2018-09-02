@@ -4,7 +4,7 @@ title: Mixtures of Linear Models
 subtitle: With example code in R.
 author: Benjamin J. Radford
 tags: [data analysis, r]
-date-string: April 19, 2015
+date: 2015-04-19
 ---
 
 So, somehow you managed to find a lot of data for which you want to fit a linear model. The problem is that there are several different categories in the data and you forgot to record which $$x$$ falls into which category. Oops. This is especially bad because the relationship between your dependent and independent variables changes across categories. How do we solve this?

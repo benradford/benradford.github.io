@@ -5,7 +5,7 @@ subtitle: Can Illicit Arms Sales to Embargoed States be Inferred from Neighborin
 author: Benjamin J. Radford
 featured-image: /images/2014-02-25/friends_and_neighbors_header.png
 tags: [statistics, political science, arms trade]
-date-string: FEBRUARY 25, 2014
+date: 2014-02-25
 ---
 Why do arms embargoes fail? Despite their frequent use by international organizations like the United Nations and the European Union, arms embargoes suffer from a poor record of success. For half a century now, <a href="http://www.sipri.org/research/armaments/transfers/controlling/research/armaments/transfers/databases/embargoes">multilateral arms embargoes</a> have been the primary tool used to fight the proliferation of small arms and light weapons (SALW) to conflict zones and perpetrators of mass violence. These agreements between countries prohibit the sale of weapons to a particular target country (or sometimes a target <a href="http://www.armscontrol.org/node/2891">organization</a>). However, official reviews and academic studies alike tend to conclude that small arms are still making their way to embargoed actors.
 

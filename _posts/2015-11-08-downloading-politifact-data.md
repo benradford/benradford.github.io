@@ -6,7 +6,7 @@ subtitle:
 author: Benjamin J. Radford
 featured-image: /images/2015-11-08/politifact.jpeg
 tags: [data analysis, r, political science]
-date-string: November 8, 2015
+date: 2015-11-08
 ---
 
 [Politifact](http://www.politifact.com) is a website the rates the truthfulness of public statements. Generally they focus on statements by political leaders but they'll also tackle celebrities, chain emails, and bloggers from time to time. Statements are rated on a five point scale: "Pants on Fire!," "False," "Mostly False," "Half-True," "Mostly True," and "True." The script below will scrape Politifact and save every statement in a gzipped CSV file. The data is structured as `who`, `when`, `validity`, `subjects`, `statement`.

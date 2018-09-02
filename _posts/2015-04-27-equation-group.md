@@ -5,7 +5,7 @@ subtitle: Attributing malware to state actors based on compile time.
 author: Benjamin J. Radford
 featured-image: /images/2015-04-27/EqDrugAttribution_header.png
 tags: [data analysis, political science, r, statistics, cybersecurity, hacking]
-date-string: March 14, 2015
+date: 2015-03-14
 ---
 
 In February 2015, Kaspersky Labs released a [report (PDF)](https://securelist.com/files/2015/02/Equation_group_questions_and_answers.pdf) detailing its investigation into the [Equation Group](https://en.wikipedia.org/wiki/Equation_Group), an extremely sophisticated hacker group engaged in espionage. Many experts suspect the [United States' NSA](http://arstechnica.com/security/2015/03/new-smoking-gun-further-ties-nsa-to-omnipotent-equation-group-hackers/) to be behind Equation Group due to keywords identified in malware the group has produced. In this article, I will use a different approach to produce evidence for attribution. Kaspersky released, in addition to it's initial report, data on the dates that pieces of malware were compiled by Equation Group. These timestamps fall almost exclusively during the working week and appear to follow a 9:00 to 5:00 schedule. Assuming that Equation Group is operated by a state actor (government), we can correlate these dates with holidays to identify countries that are more or less likely to be responsible.
