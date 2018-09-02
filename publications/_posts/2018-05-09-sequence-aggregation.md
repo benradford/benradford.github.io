@@ -7,7 +7,7 @@ author: Benjamin J. Radford, Bartley D. Richardson, Shawn E. Davis
 venue: American Statistical Association's Symposium on Data Science and Statistics 2018
 
 link-text: Available on arXiv
-link-download: ttps://arxiv.org/abs/1805.03735
+link-download: https://arxiv.org/abs/1805.03735
 
 featured-image: /images/default-header.png
 tags: [cybersecurity]
