@@ -1,8 +1,14 @@
 ---
-layout: post
+layout: publication
+
 title: Slate+Simple
-subtitle: A Jekyll theme with crisp typography and featured post images. 
+subtitle: A Jekyll theme with crisp typography and featured post images
 author: Benjamin J. Radford
+venue: Open Source Software / Model
+
+link-text: Available on Github
+link-download: https://github.com/benradford/Slate-and-Simple-Jekyll-Theme
+
 featured-image: 
 tags: [jekyll, github]
 date: 2017-08-01
