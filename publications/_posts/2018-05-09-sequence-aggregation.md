@@ -9,7 +9,7 @@ venue: American Statistical Association's Symposium on Data Science and Statisti
 link-text: Available on arXiv
 link-download: https://arxiv.org/abs/1805.03735
 
-featured-image: /images/default-header.png
+featured-image: /images/silicon-chip-header-1.png
 tags: [cybersecurity]
 date: 2018-05-09
 ---
