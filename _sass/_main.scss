@@ -302,6 +302,7 @@ header .entry-meta {
 		overflow: hidden;
 
 		@media #{$small} {
+			margin-bottom: 50px;
 			padding: 25px 15px;
 
 			.featured-image {
@@ -312,6 +313,7 @@ header .entry-meta {
 	    }
 
 		@media #{$medium} {
+			margin-bottom: 50px;
 			padding: 30px;
 
 			.featured-image {
@@ -322,7 +324,7 @@ header .entry-meta {
 		}
 
 		@media #{$large} {
-			margin-bottom: 30px;
+			margin-bottom: 50px;
 			padding: 50px 80px;
 
 			.featured-image {
