@@ -18,7 +18,7 @@ title: Publications
         <h1 class="entry-title">{{ this_year }}</h1>
       
         <ul>
-        {% endif %}
+    {% endif %}
 
         <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
              <div class="post-byline">
@@ -30,16 +30,14 @@ title: Publications
         </li>
 
     {% if forloop.last %}
-    </ul>
-        
+        </ul>
+
     <!--</article>-->
     {% else %}
         {% if this_year != next_year %}
-          </ul>
-        <!--</article>-->
-        <!--<article>-->
-          <h1 id="{{ next_year }}-ref" class="entry-title">{{next_year}}</h1>
-          <ul>
+              </ul>
+              <h1 id="{{ next_year }}-ref" class="entry-title">{{next_year}}</h1>
+              <ul>
         {% endif %}
     {% endif %}
 {% endfor %}
