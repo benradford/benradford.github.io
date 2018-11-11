@@ -1,5 +1,6 @@
 ---
-layout: publication
+layout: software
+categories: software
 
 title: Slate+Simple
 subtitle: A Jekyll theme with crisp typography and featured post images

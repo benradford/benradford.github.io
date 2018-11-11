@@ -1,5 +1,6 @@
 ---
 layout: publication
+categories: publications
 
 title: Network Traffic Anomaly Detection Using Recurrent Neural Networks
 subtitle: 

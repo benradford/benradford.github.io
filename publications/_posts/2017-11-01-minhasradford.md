@@ -1,5 +1,6 @@
 ---
 layout: publication
+categories: publications
 
 title: Enemy at the Gates
 subtitle: Variation in Economic Growth from Civil Conflict
