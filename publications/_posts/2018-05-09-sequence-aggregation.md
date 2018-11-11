@@ -1,5 +1,6 @@
 ---
 layout: publication
+categories: publications
 
 title: Sequence Aggregation Rules for Anomaly Detection in Computer Network Traffic
 subtitle:  

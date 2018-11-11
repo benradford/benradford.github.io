@@ -1,5 +1,6 @@
 ---
 layout: publication
+categories: publications
 
 title: Comparing GDELT and ICEWS Event Data
 subtitle: 

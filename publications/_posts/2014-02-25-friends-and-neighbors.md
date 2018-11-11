@@ -1,5 +1,7 @@
 ---
 layout: publication
+categories: publications
+
 title: Friends and Neighbors in the Arms Trade
 subtitle: Can Illicit Arms Sales to Embargoed States be Inferred from Neighboring State Behaviors?
 author: Benjamin J. Radford

@@ -1,5 +1,6 @@
 ---
 layout: publication
+categories: publications
 
 title: Anomaly Detection in Cyber Network Data Using a Cyber Language Approach
 subtitle: 
