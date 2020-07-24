@@ -7,11 +7,11 @@ subtitle:
 author: Benjamin J. Radford, Leonardo M. Apolonio, Antonio J. Trias, and Jim A. Simpson
 venue: Procedings of the 2017 National Symposium on Sensor and Data Fusion
 
-link-text: Available on arXiv
+link-text: arXiv:1803.10769
 link-download: https://arxiv.org/abs/1803.10769
 
 featured-image: /images/fiber-optic-header-1.png
-tags: [cybersecurity]
+tags: [cybersecurity incident detection, machine learning]
 date: 2018-03-03
 ---
 

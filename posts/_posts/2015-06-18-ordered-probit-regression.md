@@ -4,7 +4,7 @@ title: Ordered Probit Regression with Integrated Variable Selection
 subtitle: 
 author: Benjamin J. Radford
 featured-image: /images/2015-06-18/bayesian_turtle.jpg
-tags: [statistics]
+tags: [machine learning]
 date: 2015-06-18
 ---
 

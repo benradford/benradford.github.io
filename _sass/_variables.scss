@@ -22,6 +22,7 @@ $body-color                      : #202020;
 $text-color                      : #808080;
 $border-color                    : lighten($base-color,60);
 $link-color                      : #202020;
+$link-color-hover                : lighten($link-color,60);
 $highlight-color	             : #F2992E;
 
 /*--- SCREEN SIZES ----------------------------------------------------------*/

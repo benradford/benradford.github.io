@@ -1,0 +1,124 @@
+I"l_<p>China’s ruling elite are vast and notoriously difficult to obtain accurate biographies of, especially in a structured form. <a href="http://www.chinavitae.com">China Vitae</a> provides a large database of information about Chinese political leaders but offers no clear way of downloading those biographies for use in quantitative studies. Here, I offer a simple script in R for scraping this data from China Vitae that produces a CSV that chronicles the careers of thousands of Chinese leaders.</p>
+
+<p><strong>EDIT:</strong> Thanks to Jason Qiang Guo for pointing out an error in the regular expressions that caused this to fail on Windows devices. The error is fixed now.</p>
+
+<p>The code is available below or on <a href="https://github.com/benradford/ChinaVitae-Scraper/blob/master/chinese_officials.R">Github</a>.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span><span class="w">
+
+</span><span class="n">getBio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="c1"># This function takes the URL for an official's page and returns the appropriate table.</span><span class="w">
+  </span><span class="c1"># Args:</span><span class="w">
+  </span><span class="c1">#   url: The URL for an official. Example: "http://www.chinavitae.com/biography/Shen_Weichen/career"</span><span class="w">
+  </span><span class="c1">#</span><span class="w">
+  </span><span class="c1"># Returns:</span><span class="w">
+  </span><span class="c1">#   A dataframe of the official's professional history.</span><span class="w">
+  
+  </span><span class="n">page</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">htmlParse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
+  
+  </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">xpathSApply</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="s2">"//*/div[@class='bioName']"</span><span class="p">,</span><span class="w"> </span><span class="n">xmlValue</span><span class="p">)</span><span class="w">
+  
+  </span><span class="c1"># Get official's name</span><span class="w">
+  </span><span class="n">chinese.name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s2">"\\s+[^ ]+$"</span><span class="p">)</span><span class="w">
+  </span><span class="n">chinese.name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"^ "</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">chinese.name</span><span class="p">)</span><span class="w">
+  </span><span class="n">english.name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"\\s+[^ ]+$"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w">
+  </span><span class="n">english.name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"\\s+$"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">english.name</span><span class="p">)</span><span class="w">
+  
+  </span><span class="c1"># Get official's biography</span><span class="w">
+  </span><span class="n">bio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">xpathSApply</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="s2">"//*/div[@class='bioDetails']"</span><span class="p">,</span><span class="w"> </span><span class="n">xmlValue</span><span class="p">)</span><span class="w">
+  </span><span class="n">birth.date</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"^[^ ]+\\s"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">bio</span><span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="w">
+  </span><span class="n">birth.place</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"^[^ ]+\\s"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">bio</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
+  
+  </span><span class="c1"># Get history</span><span class="w">
+  </span><span class="n">tabs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readHTMLTable</span><span class="p">(</span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+  </span><span class="n">history</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tabs</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+  </span><span class="n">history</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cleanHistory</span><span class="p">(</span><span class="n">history</span><span class="p">)</span><span class="w">
+  </span><span class="k">if</span><span class="p">(</span><span class="n">nrow</span><span class="p">(</span><span class="n">history</span><span class="p">)</span><span class="o">&lt;</span><span class="m">1</span><span class="p">)</span><span class="w">
+    </span><span class="n">history</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">start.date</span><span class="o">=</span><span class="kc">NA</span><span class="p">,</span><span class="n">end.date</span><span class="o">=</span><span class="kc">NA</span><span class="p">,</span><span class="n">position</span><span class="o">=</span><span class="kc">NA</span><span class="p">,</span><span class="n">institution</span><span class="o">=</span><span class="kc">NA</span><span class="p">,</span><span class="n">location</span><span class="o">=</span><span class="kc">NA</span><span class="p">)</span><span class="w">
+
+  </span><span class="n">return.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">chinese.name</span><span class="p">,</span><span class="w"> </span><span class="n">english.name</span><span class="p">,</span><span class="w"> </span><span class="n">birth.date</span><span class="p">,</span><span class="w"> </span><span class="n">birth.place</span><span class="p">,</span><span class="w"> </span><span class="n">history</span><span class="p">)</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">return.df</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">cleanHistory</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">history.df</span><span class="p">)</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="c1"># Cleans an official's history data frame.</span><span class="w">
+  </span><span class="c1"># Args:</span><span class="w">
+  </span><span class="c1">#   history.df: A dataframe of official's history.</span><span class="w">
+  </span><span class="c1"># Returns:</span><span class="w">
+  </span><span class="c1">#   A cleaned dataframe of official's history.</span><span class="w">
+  
+  </span><span class="n">start.date</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">history.df</span><span class="p">[,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="s2">"^[[:digit:]]+"</span><span class="p">)</span><span class="w">
+  </span><span class="n">end.date</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">history.df</span><span class="p">[,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="s2">"[[:digit:]]+$"</span><span class="p">)</span><span class="w">
+  </span><span class="n">history.df</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"\\(|\\)"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">history.df</span><span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="w">
+  </span><span class="n">position</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">history.df</span><span class="p">[,</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="s2">"^[^,]+"</span><span class="p">)</span><span class="w">
+  </span><span class="n">location</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">history.df</span><span class="p">[,</span><span class="m">2</span><span class="p">],</span><span class="w"> </span><span class="s2">"\\s{3}.+$"</span><span class="p">)</span><span class="w">
+  </span><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"  "</span><span class="p">,</span><span class="s2">"~~"</span><span class="p">,</span><span class="n">history.df</span><span class="p">[,</span><span class="m">2</span><span class="p">])</span><span class="w">
+  </span><span class="n">institution</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span><span class="w"> </span><span class="s2">", [^[~~]]+"</span><span class="p">)</span><span class="w">
+  </span><span class="n">institution</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"^, "</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">institution</span><span class="p">)</span><span class="w">
+  
+  </span><span class="n">return.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">start.date</span><span class="p">,</span><span class="w"> </span><span class="n">end.date</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">institution</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">)</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">return.df</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">getOfficialsList</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="c1"># Get's a list of officials' names (and links) from the library page.</span><span class="w">
+  </span><span class="c1"># Args:</span><span class="w">
+  </span><span class="c1">#   url: The URL of a "Browse by Name" page from chinavitae.com.</span><span class="w">
+  </span><span class="c1">#</span><span class="w">
+  </span><span class="c1"># Returns:</span><span class="w">
+  </span><span class="c1">#   A vectory of career URL's to scrape for officials' bios.</span><span class="w">
+  
+  </span><span class="n">page</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">htmlParse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
+  </span><span class="n">links</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_extract_all</span><span class="p">(</span><span class="n">toString.XMLNode</span><span class="p">(</span><span class="n">page</span><span class="p">),</span><span class="w"> </span><span class="s2">"biography/[^ ]+"</span><span class="p">)[[</span><span class="m">1</span><span class="p">]]</span><span class="w">
+  </span><span class="n">links</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gsub</span><span class="p">(</span><span class="s2">"[[:punct:]]*$"</span><span class="p">,</span><span class="s2">""</span><span class="p">,</span><span class="n">links</span><span class="p">)</span><span class="w">
+  </span><span class="n">links</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"http://www.chinavitae.com/"</span><span class="p">,</span><span class="n">links</span><span class="p">,</span><span class="s2">"/career"</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+  
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">links</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The code above loads the required libraries (<code class="language-plaintext highlighter-rouge">XML</code> and <code class="language-plaintext highlighter-rouge">stringr</code>) and defines three functions we’ll need for the next step. The first function, <code class="language-plaintext highlighter-rouge">getBio</code>, takes as an argument the URL for a given official. It returns a data frame with the raw data collected on that official from their biography page. This data will then be passed to the second function, <code class="language-plaintext highlighter-rouge">cleanHistory</code>. This function will parse the raw data collected by <code class="language-plaintext highlighter-rouge">getBio</code> to return a cleaned up and well-structured version. The third function, <code class="language-plaintext highlighter-rouge">getOfficialsList</code>, will take as an argument a URL from the “Browse by Name” page of China Vitae and return all of the URLs of every officials’ bio on that page.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a base URL, then all 26 letters, then paste them together to get all 26 library pages.</span><span class="w">
+</span><span class="n">base.url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"http://www.chinavitae.com/biography_browse.php?l="</span><span class="w">
+</span><span class="n">page.letters</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nb">letters</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">26</span><span class="p">]</span><span class="w">
+</span><span class="n">library.urls</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">base.url</span><span class="p">,</span><span class="w"> </span><span class="n">page.letters</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># This will be the final data frame we produce.</span><span class="w">
+</span><span class="n">official.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span><span class="w">
+</span><span class="n">failure.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NULL</span><span class="w">
+
+</span><span class="c1"># Loop through all URLs and get officials' information.</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">uu</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">library.urls</span><span class="p">)</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="n">official.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getOfficialsList</span><span class="p">(</span><span class="n">uu</span><span class="p">)</span><span class="w">
+  </span><span class="k">for</span><span class="p">(</span><span class="n">oo</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">official.list</span><span class="p">)</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="n">cat</span><span class="p">(</span><span class="s2">"\r"</span><span class="p">,</span><span class="n">oo</span><span class="p">,</span><span class="s2">"                                     "</span><span class="p">)</span><span class="w">
+    </span><span class="n">flush.console</span><span class="p">()</span><span class="w">
+    
+    </span><span class="n">official.bio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NULL</span><span class="w">
+    </span><span class="n">try</span><span class="p">(</span><span class="n">official.bio</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">getBio</span><span class="p">(</span><span class="n">oo</span><span class="p">))</span><span class="w">
+    </span><span class="k">if</span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">official.bio</span><span class="p">))</span><span class="w">
+      </span><span class="n">failure.list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">failure.list</span><span class="p">,</span><span class="w"> </span><span class="n">oo</span><span class="p">)</span><span class="w">
+    
+    </span><span class="n">official.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">official.df</span><span class="p">,</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">official.bio</span><span class="p">))</span><span class="w">
+    </span><span class="n">Sys.sleep</span><span class="p">(</span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="m">2</span><span class="p">))</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">official.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span><span class="n">official.df</span><span class="p">)</span><span class="w">
+
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">official.df</span><span class="p">,</span><span class="s2">"chinese_officials.csv"</span><span class="p">,</span><span class="n">row.names</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="n">write.csv</span><span class="p">(</span><span class="n">failure.list</span><span class="p">,</span><span class="s2">"failures.csv"</span><span class="p">,</span><span class="n">row.names</span><span class="o">=</span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Once all of the functions are loaded, the above code will call these functions to download data on all officials from China Vitae. First, we define the base url and then iteratively pass the letters of the alphabet as the argument appended to the end of the URL (i.e. “http://www.chinavitae.com/biography_browse.php?l=[a-z]”). For each of these base pages, the list of all officials’ URLs are extracted. The inner loop iterates through every official’s page and then downloads and parses those pages. Every result is added to a list object, <code class="language-plaintext highlighter-rouge">official.df</code>. Once the loop has completed, the list is row-bound together into a data frame and saved as <code class="language-plaintext highlighter-rouge">chinese_officials.csv</code>. A list of all officials for whom no data could be downloaded is saved as <code class="language-plaintext highlighter-rouge">failures.csv</code>. This guarantees complete coverage of China Vitae where every official must either have their data recorded in <code class="language-plaintext highlighter-rouge">chinese_officials.csv</code> or must be found in <code class="language-plaintext highlighter-rouge">failures.csv</code>. These individuals can then be inspected manually, if necessary.</p>
+
+<p>Note that line 25, <code class="language-plaintext highlighter-rouge">Sys.sleep(runif(1,0.5,2))</code>, controls how the program avoids being detected and blocked by China Vitae. This tells the code to pause between downloading pages. The pause length is drawn randomly from a uniform distribution between 0.5 and 2 seconds. If you find that this program produces repeated failures, you are likely being rate-limited and need to increase these values.</p>
+
+<p>This code will throw errors under certain conditions. In particular, China Vitae handles duplicated officials’ names in an interesting way that will occasionally cause errors on the scraper’s part. However, in these cases, the data for that official is unavailable from China Vitae, so there is not much that can be done about it. These names will be added to <code class="language-plaintext highlighter-rouge">failures.csv</code>. Additionally, many of these officials are given alternative names in the China Vitae database (such as Chen_Hao|5129) which will work. Therefore, it’s not as bad as it appears at first.</p>
+:ET

@@ -4,7 +4,7 @@ title: Downloading Chinese Officials' Biographies
 subtitle: 
 author: Benjamin J. Radford
 featured-image: /images/2015-11-08/ccp.png
-tags: [data analysis, political science, r]
+tags: []
 date: 2015-11-08
 ---
 China's ruling elite are vast and notoriously difficult to obtain accurate biographies of, especially in a structured form. [China Vitae](http://www.chinavitae.com) provides a large database of information about Chinese political leaders but offers no clear way of downloading those biographies for use in quantitative studies. Here, I offer a simple script in R for scraping this data from China Vitae that produces a CSV that chronicles the careers of thousands of Chinese leaders. 

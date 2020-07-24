@@ -5,7 +5,7 @@ title: Downloading Politifact Data
 subtitle: 
 author: Benjamin J. Radford
 featured-image: /images/2015-11-08/politifact.jpeg
-tags: [data analysis, r, political science]
+tags: []
 date: 2015-11-08
 ---
 

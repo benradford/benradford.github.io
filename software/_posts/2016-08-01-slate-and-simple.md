@@ -11,7 +11,7 @@ link-text: Available on Github
 link-download: https://github.com/benradford/Slate-and-Simple-Jekyll-Theme
 
 featured-image: 
-tags: [jekyll, github]
+tags: []
 date: 2017-08-01
 ---
 

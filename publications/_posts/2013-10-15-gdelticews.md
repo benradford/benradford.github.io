@@ -5,13 +5,13 @@ categories: publications
 title: Comparing GDELT and ICEWS Event Data
 subtitle: 
 author: Michael D. Ward, Andreas Beger, Josh Cutler, Matthew Dickenson, Cassy Dorff, Benjamin J. Radford
-venue: ResearchGate
+venue: Online
 
-link-text: View PDF
+link-text: PDF
 link-download: /images/publications/GDELTICEWS.pdf
 
 featured-image: /images/satellite-header-1.png
-tags: [political science, event data]
+tags: [event extraction, political forecasting, security studies & war]
 date: 2013-10-15
 ---
 
