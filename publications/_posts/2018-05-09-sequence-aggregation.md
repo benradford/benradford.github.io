@@ -7,11 +7,11 @@ subtitle:
 author: Benjamin J. Radford, Bartley D. Richardson, Shawn E. Davis
 venue: American Statistical Association's Symposium on Data Science and Statistics 2018
 
-link-text: Available on arXiv
+link-text: arXiv:1805.03735
 link-download: https://arxiv.org/abs/1805.03735
 
 featured-image: /images/silicon-chip-header-1.png
-tags: [cybersecurity]
+tags: [cybersecurity incident detection, machine learning]
 date: 2018-05-09
 ---
 

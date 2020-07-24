@@ -16,7 +16,7 @@ title: Tags Archive
     <ul class="entry-meta inline-list">
         {% for item in (0..site.tags.size) %}{% unless forloop.last %}
             {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  	             <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">({{ site.tags[this_word].size }})</span></a></li>
+  	             <li><a href="#{{ this_word }}" class="tag"><span class="term" style="text-transform: capitalize">{{ this_word }}</span> <span class="count">({{ site.tags[this_word].size }})</span></a></li>
             {% endunless %}
         {% endfor %}
     </ul>
@@ -25,12 +25,21 @@ title: Tags Archive
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 	<article>
-        <h1 id="{{ this_word }}" class="entry-title">{{ this_word }}</h1>
+        <h1 id="{{ this_word }}" class="entry-title" style="text-transform: capitalize">{{ this_word }}</h1>
             <ul>
                 {% for post in site.tags[this_word] %}
                     {% if post.title != null %}
-                        <li>
-                            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}   ({{ post.date | date: "%B %d, %Y" }})</a>
+                        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}{% if post.subtitle %}: {{post.subtitle}}{% endif %}</a> 
+                        <br> 
+                             <div class="post-byline">
+                                {% if post.venue %}<i>{{ post.venue }}</i> <br>{% endif %}
+                                {{ post.author }} <br>
+                                {% if post.link-download %}
+                                    <a href="{{ post.link-download }}">Download Paper.</a>
+                                {% endif %}
+                                <div class="post-date">
+                                    {{ post.date | date: "%B %-d, %Y" }}
+                                </div>
                         </li>
                     {% endif %}
                 {% endfor %}

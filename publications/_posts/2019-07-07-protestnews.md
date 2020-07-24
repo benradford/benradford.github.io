@@ -5,13 +5,14 @@ categories: publications
 title: Multitask Models for Supervised Protest Detection in Texts
 subtitle: 
 author: Benjamin J. Radford
-venue: 2019 CLEF Working Notes
+venue: Working Notes of CLEF 2019
+volume: 2380
 
-link-text: Available on EasyChair Prepints
-link-download: https://easychair.org/publications/preprint/HBCd
+link-text: PDF
+link-download: http://ceur-ws.org/Vol-2380/paper_69.pdf
 
 featured-image: /images/protest-header-1.png
-tags: [political science, event data]
+tags: [security studies & war, event extraction, machine learning]
 date: 2019-07-07
 ---
 

@@ -1,0 +1,2 @@
+I"ø<p>Chinaâ€™s ruling elite are vast and notoriously difficult to obtain accurate biographies of, especially in a structured form. <a href="http://www.chinavitae.com">China Vitae</a> provides a large database of information about Chinese political leaders but offers no clear way of downloading those biographies for use in quantitative studies. Here, I offer a simple script in R for scraping this data from China Vitae that produces a CSV that chronicles the careers of thousands of Chinese leaders.</p>
+:ET

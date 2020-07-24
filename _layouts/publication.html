@@ -6,36 +6,7 @@
    
 <head>
     {% include head.html %}
-
-    <!-- HEADER IMAGE -->
-    <!-- <center>
-        <span class="main-header-image">
-            <a href="/"><img src="/images/header/clean-and-simple-header.jpg"></a>
-        </span>
-    </center> -->
-    <br>
-    <center>
-        <span class="main-header-image">
-            <h1 style="font-weight:100; font-kerning:normal"><a href="/">{{ site.title }}</a></h1>
-        </span>
-    </center>
-
-    <!-- NAVIGATION -->
-    <br>
-    <center>
-        <ul class="navigation-bar">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/publications/">PUBLICATIONS</a></li>
-            <li><a href="/software/">SOFTWARE</a></li>
-            <li><a href="/archives/">ARCHIVE</a></li>
-            <li><a href="/tags/">TAGS</a></li>
-            <li><a href="/about/">ABOUT</a></li>
-            <li><a href="/images/radford_cv.pdf">CV</a></li>
-            <li><a href="https://www.github.com/benradford"><i class='fa fa-github-alt'></i></a></li>  
-            <li><a href="https://www.twitter.com/ben_j_radford"><i class="fa fa-twitter"></i></a></li>
-            <!-- <li><a href="https://www.linkedin.com/in/benjaminradford"><i class='fa fa-linkedin'></i></a></li>   -->
-        </ul>
-    </center> 
+    {% include navigation.html %}
 </head>
 
 <!-- BODY -->
@@ -57,14 +28,16 @@
             <h1 class="entry-title">
                 <a>{{ page.title }}</a>
             </h1>
+            {% if page.subtitle %}
             <h3 class="entry-subtitle">
                 <a>{{ page.subtitle }}</a>
             </h3>
+            {% endif %}
             <!-- POST BYLINE -->
             <div class="post-byline">
                 <i>{{ page.venue }}</i> <br>
                 {{ page.author }} <br>
-                <a href="{{ page.link-download }}">{{ page.link-text }}</a>
+                Download: <a href="{{ page.link-download }}">{{ page.link-text }}</a>
             </div><br>
             <!-- POST DATE -->
             <div class="post-date">
@@ -75,9 +48,10 @@
                 
             <!-- POST CONTENT -->
             <div class="entry-content">
-                <h4><a href="{{page.link-download}}">Download paper.</a></h4>
                 {{ page.content }}
             </div>  
+
+            {% include citation.html %}
 
             <!--- DIVIDING LINE -->
             <hr>

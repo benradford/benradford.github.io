@@ -5,13 +5,16 @@ categories: publications
 title: Enemy at the Gates
 subtitle: Variation in Economic Growth from Civil Conflict
 author: Shahryar Minhas and Benjamin J. Radford
-venue: Journal of Conflict Resolution 61(10):2105-2129
+venue: Journal of Conflict Resolution
+volume: 61
+number: 10
+pages: 2105--2129
 
-link-text: View Prepublication
+link-text: Prepublication PDF
 link-download: /images/publications/minhasradford.pdf
 
 featured-image: /images/bullets-header-1.png
-tags: [political science, economics]
+tags: [security studies & war]
 date: 2017-11-01
 ---
 

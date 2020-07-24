@@ -4,7 +4,7 @@ title: Where is the Equation Group?
 subtitle: Attributing malware to state actors based on compile time.
 author: Benjamin J. Radford
 featured-image: /images/2015-04-27/EqDrugAttribution_header.png
-tags: [data analysis, political science, r, statistics, cybersecurity, hacking]
+tags: [cybersecurity incident attribution]
 date: 2015-03-14
 ---
 

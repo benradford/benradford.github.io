@@ -7,11 +7,11 @@ subtitle:
 author: Bartley D. Richardson, Benjamin J. Radford, Shawn E. Davis, Keegan Hines, David Pekarek
 venue: American Statistical Association's Symposium on Data Science and Statistics 2018
 
-link-text: Available on arXiv
+link-text: arXiv:1808.10742
 link-download: https://arxiv.org/abs/1808.10742
 
 featured-image: /images/mainframe-header-1.png
-tags: [cybersecurity]
+tags: [cybersecurity incident detection, machine learning]
 date: 2018-09-08
 ---
 

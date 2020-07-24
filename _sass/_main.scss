@@ -2,19 +2,19 @@
 
 a {  
 	text-decoration: none;
-	color: $link-color; 
+	color: $highlight-color; 
 
 	&:visited { 
-		color: lighten($link-color, 20); 
+		color: lighten($highlight-color, 0); 
 	}
 
 	&:hover { 
-		color: lighten($link-color, 20); 
+		color: lighten($highlight-color, 20); 
 	}
 
 	&:focus { 
 		outline: thin dotted; 
-		color: darken($link-color, 20);
+		color: darken($highlight-color, 20);
 	}
 
 	&:hover, 
@@ -159,6 +159,7 @@ svg:not(:root) {
 
     a{
     	text-transform: uppercase;
+        //color: $highlight-color;
         //color: $base-color;
         color: lighten($base-color,30);
         font-weight: 100;
@@ -166,7 +167,8 @@ svg:not(:root) {
     
     a:hover {
     	text-transform: uppercase;
-        color: lighten($base-color,60);
+        color: $highlight-color;
+        //color: lighten($base-color,60);
         font-weight: 100;
     }
 }
@@ -211,6 +213,10 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 	text-align: left;
 }
 
+li.entry-title{
+    padding-bottom:10px;
+}
+
 .main-header-image {
     img {
         @media #{$medium} {
@@ -223,21 +229,18 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 			max-width: $column-width;
 		}
     }
-    
-    img:hover {
-        opacity: 0.8;
-    }
 
-    h1, a, div {
+    h1, a:link, a:visited, a:hover, a:active, div {
     	text-transform: uppercase;
-		color: lighten($base-color, 60);
+        color: $highlight-color;
+		//color: lighten($base-color, 60);
 		letter-spacing: 5px;
 	}
 }
 
 .post-date {
-    font-size: 12px;
-	text-transform: uppercase;
+    font-size: 14px;
+	text-transform: none;
     color: lighten($base-color,50);
 
 	a {
@@ -250,7 +253,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 
 .post-byline {
-    font-size: 12px;
+    font-size: 14px;
 	text-transform: none;
     color: lighten($base-color,0);
 
@@ -373,6 +376,7 @@ header .entry-meta {
 body {
     font-family: $base-font;
     color: $text-color;
+    font-weight: 300;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -386,10 +390,81 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
+
+    a {  
+        text-decoration: none;
+        color: lighten($link-color, 20); 
+
+        &:visited { 
+            color: lighten($link-color, 20); 
+        }
+
+        &:hover { 
+            color: lighten($link-color, 20); 
+        }
+
+        &:focus { 
+            outline: thin dotted; 
+            color: darken($link-color, 20);
+        }
+
+        &:hover, 
+        &:active { 
+            outline: 0; 
+        }
+    }
 }
+
 
 h1 {
 	@media #{$medium} {
         font-size: 32px;
 	}
+}
+
+/*--- CARD GRID ----------------------------------------------------------------*/
+.card-grid{
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  /*background: #F1F1F2;*/
+  display: flex;
+  align-items: center;
+
+  border: 1px solid lighten($base-color, 30);
+  // box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
+  // box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.card-img {
+  display: flex;
+  margin: 0px;
+  height: 100%;
+  align-items: center;
+  // background-color: lighten($base-color, 30);
+  a:link,a:hover,a:visited,a:active{
+    color: lighten($base-color, 30);
+  }
+}
+
+.card-img i {
+  padding: 10px;
+}
+
+.card-body {
+  height: 100%;
+  flex: 0 1 auto;
+  display: flex;
+  /*flex-direction: column;*/
+  margin: 5px;
+  padding: 5px;
+  align-items: center;
 }

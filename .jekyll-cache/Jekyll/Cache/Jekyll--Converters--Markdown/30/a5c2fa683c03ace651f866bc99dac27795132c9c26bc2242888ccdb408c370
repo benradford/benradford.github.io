@@ -1,0 +1,2 @@
+I"<p><i>TaPvex</i> is a trained word2vec model of part-of-speech-tagged and named-entity-tagged words and phrases. The model was trained on a large corpus of English language news text from the early 2010s. Words have been tagged using Stanford CoreNLP to include <a href="https://nlp.stanford.edu/software/CRF-NER.shtml">named entities</a> (NER) and <a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html">Penn Treebank</a> parts-of-speech (POS). Tagged words have been concatenated into n-gram phrases.<br /></p>
+:ET
