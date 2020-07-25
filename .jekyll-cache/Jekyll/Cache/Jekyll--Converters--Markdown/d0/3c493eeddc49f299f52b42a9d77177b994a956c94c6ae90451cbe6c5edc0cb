@@ -1,21 +1,44 @@
----
-layout: page
-title: Benjamin J. Radford
----
+I"[<style>
+ .grid {
+  display: block;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+ @media only screen and (min-width: 900px) {
+  .grid {
+    display: flex;
+  }
+}
+.col-1-2 {
+  align-content: space-between;
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.col-1-2:last-child {
+  margin-left: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-grow: 2;
+}
+
+
+
+</style>
 
 <div class="grid">
 <div class="col-1-2">
     <center>
-    <img src="/images/benradford.png">
-    </center><br>
+    <img src="/images/benradford.png" />
+    </center><br />
     <p>
     <center>
         <ul class="navigation-bar">
            <li><a href="/images/radford_cv.pdf"><i class="ai ai-cv-square ai-2x"></i></a></li>
-            <li><a href="https://www.github.com/benradford"><i class='fa fa-github-alt fa-2x'></i></a></li>  
+            <li><a href="https://www.github.com/benradford"><i class="fa fa-github-alt fa-2x"></i></a></li>  
             <li><a href="https://www.twitter.com/ben_j_radford"><i class="fa fa-twitter fa-2x"></i></a></li>
-            <li><a href="https://www.researchgate.net/profile/Benjamin_Radford"><i class='ai ai-researchgate  ai-2x'></i></a></li>
-            <li><a href="https://scholar.google.com/citations?user=0K05-rwAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar  ai-2x"></i></a></li>       
+            <li><a href="https://www.researchgate.net/profile/Benjamin_Radford"><i class="ai ai-researchgate  ai-2x"></i></a></li>
+            <li><a href="https://scholar.google.com/citations?user=0K05-rwAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai ai-google-scholar  ai-2x"></i></a></li>       
         </ul>
     </center>
     </p>
@@ -33,7 +56,7 @@ title: Benjamin J. Radford
 
 <h2 class="entry-title"><i class="fa fa-hat-wizard"></i> President &amp; Co-founder, LevelUp Research</h2>
 <p>
-  LevelUp Research, LLC provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
+  LevelUp Research, LLC. provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
 </p>
 
 <h2 class="entry-title"><i class="fa fa-user-tie"></i> Founder, Radford Consulting</h2>
@@ -82,10 +105,10 @@ title: Benjamin J. Radford
 
  <div class="card">
   <div class="card-img">
-    <a href="tags/#security%20studies%20&%20war"><i class="fa fa-bomb fa-lg"></i></a>
+    <a href="tags/#security%20studies%20&amp;%20war"><i class="fa fa-bomb fa-lg"></i></a>
   </div>
   <div class="card-body">
-    <a href="tags/#security%20studies%20&%20war">Security studies &amp; war</a>
+    <a href="tags/#security%20studies%20&amp;%20war">Security studies &amp; war</a>
   </div>
  </div>
 
@@ -102,3 +125,4 @@ title: Benjamin J. Radford
 
 </div>
 </div>
+:ET
