@@ -25,7 +25,7 @@ title: Benjamin J. Radford
 
 <h2 class="entry-title"><i class="fa fa-university"></i> Assistant Professor, UNC Charlotte</h2>
 <ul>
-    <li>Full time faculty member, <a href="https://politicalscience.uncc.edu">Political Science &amp; Public Administration</a></li>
+    <li>Full time faculty member, <a href="https://politicalscience.uncc.edu/directory/benjamin-j-radford">Political Science &amp; Public Administration</a></li>
     <li>Core faculty member, <a href="https://publicpolicy.uncc.edu">Public Policy Ph.D. Program</a> </li> 
     <li>Affiliate faculty member, <a href="https://datascience.uncc.edu/ben-radford-phd">School of Data Science</a></li>
 </ul>
