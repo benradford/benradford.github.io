@@ -9,12 +9,12 @@ a {
 	}
 
 	&:hover { 
-		color: lighten($highlight-color, 20); 
+		color: lighten($highlight-color, 0); 
 	}
 
 	&:focus { 
 		outline: thin dotted; 
-		color: darken($highlight-color, 20);
+		color: darken($highlight-color, 0);
 	}
 
 	&:hover, 

@@ -1,29 +1,4 @@
-I"<style>
- .grid {
-  display: block;
-  align-items: center;
-  flex-wrap: wrap;
- }
- @media only screen and (min-width: 900px) {
-  .grid {
-    display: flex;
-  }
-}
-.col-1-2 {
-  align-content: space-between;
-  flex: 1;
-}
-.col-1-2:last-child {
-  margin-left: 20px;
-  padding-left: 20px;
-  flex-grow: 2;
-}
-
-
-
-</style>
-
-<div class="grid">
+I"ü<div class="grid">
 <div class="col-1-2">
     <center>
     <img src="/images/benradford.png" />
@@ -45,10 +20,21 @@
 
 <h2 class="entry-title"><i class="fa fa-university"></i> Assistant Professor, UNC Charlotte</h2>
 <ul>
-    <li>Full time faculty member, <a href="https://politicalscience.uncc.edu">Political Science &amp; Public Administration</a></li>
+    <li>Full time faculty member, <a href="https://politicalscience.uncc.edu/directory/benjamin-j-radford">Political Science &amp; Public Administration</a></li>
     <li>Core faculty member, <a href="https://publicpolicy.uncc.edu">Public Policy Ph.D. Program</a> </li> 
     <li>Affiliate faculty member, <a href="https://datascience.uncc.edu/ben-radford-phd">School of Data Science</a></li>
 </ul>
+
+
+<h2 class="entry-title"><i class="fa fa-hat-wizard"></i> President &amp; Co-founder, LevelUp Research</h2>
+<p>
+  LevelUp Research, LLC provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
+</p>
+
+<h2 class="entry-title"><i class="fa fa-user-tie"></i> Founder, Radford Consulting</h2>
+<p>
+  Radford Consulting, LLC consults for customers interested in the nexus of cybersecurity, political conflict, and artificial intelligence.
+</p>
 
 <h2 class="entry-title"><i class="fa fa-rocket"></i> Research Interests</h2>
 <div class="card-grid">
@@ -107,18 +93,6 @@
   </div>
  </div>
 </div>
-
-<h2 class="entry-title"><i class="fa fa-hat-wizard"></i> President &amp; Co-founder, LevelUp Research</h2>
-<p>
-  LevelUp Research, LLC. provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
-</p>
-
-<h2 class="entry-title"><i class="fa fa-user-tie"></i> Founder, Radford Consulting</h2>
-<p>
-  Radford Consulting, LLC consults for customers interested in the nexus of cybersecurity, political conflict, and artificial intelligence.
-</p>
-
-
 
 
 </div>
