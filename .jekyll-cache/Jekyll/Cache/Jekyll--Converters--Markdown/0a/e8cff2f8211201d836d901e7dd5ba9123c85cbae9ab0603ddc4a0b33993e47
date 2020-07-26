@@ -1,21 +1,16 @@
----
-layout: page
-title: Benjamin J. Radford
----
-
-<div class="grid">
+I"4<div class="grid">
 <div class="col-1-2">
     <center>
-    <img src="/images/benradford.png">
-    </center><br>
+    <img src="/images/benradford.png" />
+    </center><br />
     <p>
     <center>
         <ul class="navigation-bar">
            <li><a href="/images/radford_cv.pdf"><i class="ai ai-cv-square ai-2x"></i></a></li>
-            <li><a href="https://www.github.com/benradford"><i class='fa fa-github-alt fa-2x'></i></a></li>  
+            <li><a href="https://www.github.com/benradford"><i class="fa fa-github-alt fa-2x"></i></a></li>  
             <li><a href="https://www.twitter.com/ben_j_radford"><i class="fa fa-twitter fa-2x"></i></a></li>
-            <li><a href="https://www.researchgate.net/profile/Benjamin_Radford"><i class='ai ai-researchgate  ai-2x'></i></a></li>
-            <li><a href="https://scholar.google.com/citations?user=0K05-rwAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar  ai-2x"></i></a></li>       
+            <li><a href="https://www.researchgate.net/profile/Benjamin_Radford"><i class="ai ai-researchgate  ai-2x"></i></a></li>
+            <li><a href="https://scholar.google.com/citations?user=0K05-rwAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai ai-google-scholar  ai-2x"></i></a></li>       
         </ul>
     </center>
     </p>
@@ -23,7 +18,8 @@ title: Benjamin J. Radford
 
 <div class="col-1-2">
 
-<h2 class="entry-title">Assistant Professor, UNC Charlotte</h2>
+<h2 class="entry-title">Assistant Professor</h2>
+<h3 class="entry-title"><i class="fa fa-university"></i> UNC Charlote</h3>
 <ul>
     <li>Full time faculty member, <a href="https://politicalscience.uncc.edu/directory/benjamin-j-radford">Political Science &amp; Public Administration</a></li>
     <li>Core faculty member, <a href="https://publicpolicy.uncc.edu">Public Policy Ph.D. Program</a> </li> 
@@ -31,17 +27,18 @@ title: Benjamin J. Radford
 </ul>
 
 
-<h2 class="entry-title">President &amp; Co-founder, LevelUp Research</h2>
+<h2 class="entry-title">President &amp; Co-founder</h2>
+<h3 class="entry-title"><i class="fa fa-hat-wizard"></i> LevelUp Research</h3> 
 <p>
   LevelUp Research, LLC provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
 </p>
 
-<h2 class="entry-title">Founder, Radford Consulting</h2>
+<h2 class="entry-title"><i class="fa fa-user-tie"></i> Founder, Radford Consulting</h2>
 <p>
   Radford Consulting, LLC consults for customers interested in the nexus of cybersecurity, political conflict, and artificial intelligence.
 </p>
 
-<h2 class="entry-title">Research Interests</h2>
+<h2 class="entry-title"><i class="fa fa-rocket"></i> Research Interests</h2>
 <div class="card-grid">
 <div class="card">
   <div class="card-img">
@@ -82,10 +79,10 @@ title: Benjamin J. Radford
 
  <div class="card">
   <div class="card-img">
-    <a href="tags/#security%20studies%20&%20war"><i class="fa fa-bomb fa-lg"></i></a>
+    <a href="tags/#security%20studies%20&amp;%20war"><i class="fa fa-bomb fa-lg"></i></a>
   </div>
   <div class="card-body">
-    <a href="tags/#security%20studies%20&%20war">Security studies &amp; war</a>
+    <a href="tags/#security%20studies%20&amp;%20war">Security studies &amp; war</a>
   </div>
  </div>
 
@@ -102,3 +99,4 @@ title: Benjamin J. Radford
 
 </div>
 </div>
+:ET
