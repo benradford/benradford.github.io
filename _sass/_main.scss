@@ -444,6 +444,10 @@ h1 {
   overflow: hidden;
 }
 
+//.card:hover {
+//  background-color: lighten($base-color, 10);
+//}
+
 .card-img {
   display: flex;
   margin: 0px;
@@ -457,6 +461,7 @@ h1 {
 
 .card-img i {
   padding: 10px;
+  color: lighten($base-color, 30);
 }
 
 .card-body {
