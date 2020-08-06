@@ -24,41 +24,45 @@ title: Benjamin J. Radford
 
   <div class="col-1-2">
 
-  <h2 class="entry-title">Assistant Professor, UNC Charlotte</h2>
-  <ul>
-      <li>Full time faculty member, <a href="https://politicalscience.uncc.edu/directory/benjamin-j-radford">Political Science &amp; Public Administration</a></li>
-      <li>Core faculty member, <a href="https://publicpolicy.uncc.edu">Public Policy Ph.D. Program</a> </li> 
-      <li>Affiliate faculty member, <a href="https://datascience.uncc.edu/ben-radford-phd">School of Data Science</a></li>
-  </ul>
+    <article style="padding:10px; margin-bottom:10px; margin-top:10px">
+        <h2 class="entry-title">
+            <a>Positions</a>
+        </h2><hr>
+
+      <h3 class="entry-title">Assistant Professor, UNC Charlotte</h3>
+      <ul>
+          <li>Full time faculty member, <a href="https://politicalscience.uncc.edu/directory/benjamin-j-radford">Political Science &amp; Public Administration</a></li>
+          <li>Core faculty member, <a href="https://publicpolicy.uncc.edu">Public Policy Ph.D. Program</a> </li> 
+          <li>Affiliate faculty member, <a href="https://datascience.uncc.edu/ben-radford-phd">School of Data Science</a></li>
+      </ul>
+
+      <h3 class="entry-title">President &amp; Co-founder, LevelUp Research</h3>
+
+      <h3 class="entry-title">Founder, Radford Consulting</h3>
+    </article>
 
 
-  <h2 class="entry-title">President &amp; Co-founder, LevelUp Research</h2>
-  <p>
-    LevelUp Research, LLC provides cybersecurity and data science expertise to customers in need to customized, scalable analytic solutions.
-  </p>
+  <article style="padding:10px; margin-bottom:10px; margin-top:10px">
+        <h2 class="entry-title">
+            <a>Research Interests</a>
+        </h2><hr>
+      <div class="card-grid">
 
-  <h2 class="entry-title">Founder, Radford Consulting</h2>
-  <p>
-    Radford Consulting, LLC consults for customers interested in the nexus of cybersecurity, political conflict, and artificial intelligence.
-  </p>
-
-  <h2 class="entry-title">Research Interests</h2>
-  <div class="card-grid">
-
-{% for tag in site.tags %}
-{% capture cleantag %}{{ tag[0] | replace: " ", "_" }}{% endcapture %}
-<a href="tags/#{{ tag[0] }}">
-  <div class="card">
-    <div class="card-img">
-      <i class="fa {{ site.data.mapping.tags[cleantag] }} fa-lg"></i>
+      {% for tag in site.tags %}
+      {% capture cleantag %}{{ tag[0] | replace: " ", "_" }}{% endcapture %}
+      <a href="tags/#{{ tag[0] }}">
+        <div class="card">
+          <div class="card-img">
+            <i class="fa {{ site.data.mapping.tags[cleantag] }} fa-lg"></i>
+          </div>
+          <div class="card-body">
+            {{ tag[0] }}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
     </div>
-    <div class="card-body">
-      {{ tag[0] }}
-    </div>
-  </div>
-</a>
-{% endfor %}
-
-
-  </div>
+  </article>
 </div>
+</div>
+
