@@ -1,3 +1,5 @@
 _site/
 .sass-cache/
 .jekyll-cache/
+publications/_posts/.Rhistory
+images/.DS_Store
