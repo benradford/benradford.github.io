@@ -3,3 +3,5 @@ _site/
 .jekyll-cache/
 publications/_posts/.Rhistory
 images/.DS_Store
+.Rhistory
+.DS_Store
