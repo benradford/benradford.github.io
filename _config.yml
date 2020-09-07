@@ -13,7 +13,6 @@ gems:
   - jekyll-feed
 plugins: 
   - jekyll-paginate
-  - jekyll-katex
 paginate_path: "/posts/page:num"
 sass:
   sass_dir: _sass
