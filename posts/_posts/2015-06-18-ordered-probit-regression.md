@@ -15,7 +15,6 @@ I developed this model (below) as part of a research project for a course on Bay
 R code to implement this model is available upon request. I will add it to this post when I find it.
 
 <h3>Priors:</h3>
-{% katexmm %}
 $$ 
 \pi(\gamma) = \prod_{j=1}^{m-1} N(\gamma_j;\mu_0,\sigma_0^2) \\
 \pi(\beta) = \prod_{k=1}^p\delta_0(\beta_{0k})p_{0k} + (1-p_{0k})N(\beta_{0k};0,c_k^2) \\
@@ -41,7 +40,6 @@ V_k = (c_k^2+x_k^Tx_k)^{-1}\\
 \pi(\gamma_j | \beta, z, y, X) \propto N(\gamma_j;\mu_0,\sigma_0^2)\\
 \pi(z_i | \beta, z_{-i}, \gamma, y, X) \propto N(z_i;X_i\beta,1)
 $$
-{% endkatexmm %}
 
 <hr>
 <small>Header Image by John from U.S. of A. (Baby Turtle 023) [<a href="http://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>], via Wikimedia Commons.</small>
