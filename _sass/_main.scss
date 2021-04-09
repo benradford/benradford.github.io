@@ -1,3 +1,4 @@
+
 /*--- LINKS -----------------------------------------------------------------*/
 
 a {  
@@ -162,14 +163,14 @@ svg:not(:root) {
         //color: $highlight-color;
         //color: $base-color;
         color: lighten($base-color,30);
-        font-weight: 100;
+        font-weight: 300;
     }
     
     a:hover {
     	text-transform: uppercase;
         color: $highlight-color;
         //color: lighten($base-color,60);
-        font-weight: 100;
+        font-weight: 300;
     }
 }
 
@@ -183,7 +184,7 @@ svg:not(:root) {
     }
     
     &:hover {
-        color: lighten($highlight-color,20);
+        color: lighten($highlight-color,0);
     }
 }
 
@@ -204,12 +205,15 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 
 .entry-title {
-    font-weight: 100;
+    font-weight: 300;
     text-align: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .entry-subtitle {
-	font-weight: 100;
+	font-weight: 300;
 	text-align: left;
 }
 
@@ -241,14 +245,14 @@ li.entry-title{
 .post-date {
     font-size: 14px;
 	text-transform: none;
-    color: lighten($base-color,50);
+    color: lighten($base-color,0);
 
 	a {
-		color: lighten($base-color,50);
+		color: lighten($base-color,0);
 	}
     
     a:hover{
-        color: lighten($base-color,20);
+        color: lighten($base-color,0);
     }
 }
 
@@ -262,7 +266,7 @@ li.entry-title{
 	}
     
     a:hover{
-        color: lighten($highlight-color,20);
+        color: lighten($highlight-color,0);
     }
 }
 
@@ -279,6 +283,13 @@ header .entry-meta {
 #post-index {
 	#main {
 		margin: 40px 2px 20px 2px;
+
+    @media #{$small} {
+      max-width: $column-width;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
 		@media #{$medium} {
 			max-width: $column-width;
@@ -298,48 +309,48 @@ header .entry-meta {
 	article {
 		background-color: #fff;
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
-		// box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
 		border-radius: 3px;
 		margin-bottom: 20px;
-		padding: 25px 15px;
+		padding: 0px 0px 50px 0px;
 		overflow: hidden;
 
 		@media #{$small} {
-			margin-bottom: 50px;
-			padding: 25px 15px;
+      margin-bottom: 25px;
+      padding: 25px 50px;
 
-			.featured-image {
-				display:block;
-	        	margin:-25px -15px;
-	        	padding: 0px 0px 20px 0px;
-	        }
-	    }
+      .featured-image {
+            display:block;
+            margin:-50px -80px;
+            padding: 0px 0px 50px 0px;
+          }
+    }
 
 		@media #{$medium} {
-			margin-bottom: 50px;
-			padding: 30px;
+      margin-bottom: 25px;
+      padding: 25px 50px;
 
-			.featured-image {
-				display:block;
-	        	margin:-30px -30px;
-	        	padding: 0px 0px 30px 0px;
-	        }
-		}
+      .featured-image {
+            display:block;
+            margin:-50px -80px;
+            padding: 0px 0px 50px 0px;
+          }
+    }
 
 		@media #{$large} {
-			margin-bottom: 50px;
-			padding: 50px 80px;
+			margin-bottom: 25px;
+			padding: 25px 50px;
 
 			.featured-image {
-				display:block;
+				    display:block;
 	        	margin:-50px -80px;
 	        	padding: 0px 0px 50px 0px;
 	        }
 		}
        
         a { 
+
             img:hover {
-                opacity: 0.9;
+                filter: brightness(110%);
             }
         }
 
@@ -393,10 +404,10 @@ h1, h2, h3, h4, h5, h6 {
 
     a {  
         text-decoration: none;
-        color: lighten($link-color, 20); 
+        color: lighten($link-color, 0); 
 
         &:visited { 
-            color: lighten($link-color, 20); 
+            color: lighten($link-color, 0); 
         }
 
         &:hover { 
@@ -482,20 +493,32 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
  }
- @media only screen and (min-width: 900px) {
-  .grid {
-    display: flex;
-  }
-}
+
 .col-1-2 {
   align-content: space-between;
   flex: 1;
   padding-left: 0px;
   padding-right: 0px;
+
 }
 .col-1-2:last-child {
   margin-left: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   flex-grow: 2;
+}
+
+@media #{$toosmall} {
+  .col-1-2:first-child {
+    display: none;
+  }
+}
+
+@media #{$toosmall} {
+  .col-1-2:last-child {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

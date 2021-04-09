@@ -1,7 +1,7 @@
 <div class="language-plaintext highlighter-rouge">
     Cite this Paper (BibTeX)
     <div class="highlight">
-    <pre>
+    <pre  style="overflow-x:hidden">
 @article{% raw %}{{% endraw %}radford:{{ page.date | date:"%Y%m%d" }},
     author={% raw %}{{% endraw %}{{ page.author | replace:","," and"}}{% raw %}}{% endraw %},
     title={% raw %}{{% endraw %}{{page.title}}{% if page.subtitle %}: {{page.subtitle}}{% endif %}{% raw %}}{% endraw %},
@@ -9,4 +9,5 @@
     year={% raw %}{{% endraw %}{{ page.date | date:"%Y" }}{% raw %}}{% endraw %},
     volume={% raw %}{{% endraw %}{{page.volume}}{% raw %}}{% endraw %},
     number={% raw %}{{% endraw %}{{page.number}}{% raw %}}{% endraw %},
-    pages={% raw %}{{% endraw %}{{page.pages}}{% raw %}}{% endraw %}{% raw %}}{% endraw %}</pre></div></div>
+    pages={% raw %}{{% endraw %}{{page.pages}}{% raw %}}{% endraw %},
+    DOI={% raw %}{{% endraw %}{{page.doi}}{% raw %}}{% endraw %}{% raw %}}{% endraw %}</pre></div></div>

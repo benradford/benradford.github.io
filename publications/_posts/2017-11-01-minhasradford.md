@@ -9,6 +9,7 @@ venue: Journal of Conflict Resolution
 volume: 61
 number: 10
 pages: 2105--2129
+doi: 10.1177/0022002716639100
 
 link-text: Prepublication PDF
 link-download: /images/publications/minhasradford.pdf
