@@ -4,7 +4,7 @@ categories: publications
 
 title: Death by Political Party
 subtitle: The Relationship Between COVID-19 Deaths and Political Party Affiliation
-author: Benjamin J. Radford and Jingjing Gao
+author: Jingjing Gao and Benjamin J. Radford
 venue: World Medical & Health Policy
 pages: 
 doi: 10.1002/wmh3.435
