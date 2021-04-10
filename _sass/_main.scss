@@ -314,6 +314,17 @@ header .entry-meta {
 		padding: 0px 0px 50px 0px;
 		overflow: hidden;
 
+	@media #{$toosmall} {
+      margin-bottom: 25px;
+      padding: 25px 10px;
+
+      .featured-image {
+            display:block;
+            margin:-50px -80px;
+            padding: 0px 0px 50px 0px;
+          }
+    }
+
 		@media #{$small} {
       margin-bottom: 25px;
       padding: 25px 50px;
@@ -518,7 +529,7 @@ h1 {
 
 @media #{$toosmall} {
   .col-1-2:last-child {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
