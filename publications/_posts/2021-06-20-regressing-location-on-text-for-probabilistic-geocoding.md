@@ -9,8 +9,8 @@ venue: Proceedings of the CASE 2021, co-located with ACL-IJCNLP 2021
 pages: 
 doi: 
 
-link-text:
-link-download: 
+link-text: PDF
+link-download: /images/publications/regressing_location_on_text_for_probabilistic_geocoding.pdf
 
 featured-image: /images/satellite-header-2.png
 tags: []
