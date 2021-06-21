@@ -5,7 +5,7 @@ categories: publications
 title: Regressing Location on Text for Probabilistic Geocoding
 subtitle: 
 author: Benjamin J. Radford
-venue: Proceedings of the CASE 2021, co-located ACL-IJCNLP 2021
+venue: Proceedings of the CASE 2021, co-located with ACL-IJCNLP 2021
 pages: 
 doi: 
 
