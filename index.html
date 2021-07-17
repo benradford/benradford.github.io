@@ -47,6 +47,7 @@ title: Posts
 {% endif %}
 
 {% for post in paginator.posts %}
+
 <article>  
     <!-- POST FEATURED IMAGE -->
     <div class="featured-image"><a href="{{ site.url }}{{ post.url }}">
@@ -56,7 +57,6 @@ title: Posts
         <img src="{{ post.featured-image }}" style="width:100%"></a>
     {% endif %}
     </div>
-
     <!-- POST TITLE -->
     <header>
         <h2 class="entry-title">
@@ -68,8 +68,6 @@ title: Posts
         </h3>
         {% endif %} -->
     </header>
-
-
             <!-- POST BYLINE -->
             <div class="post-byline">
                 <i>{{ post.venue }}</i> <br>
@@ -81,6 +79,7 @@ title: Posts
             <div class="post-date">
                 {{ post.date | date: "%B %-d, %Y" }}
             </div>
+
 
     <!-- POST CONTENT -->
 <!--     <hr>

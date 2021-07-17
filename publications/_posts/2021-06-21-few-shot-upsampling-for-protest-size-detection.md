@@ -12,7 +12,7 @@ doi:
 link-text: PDF
 link-download: https://arxiv.org/pdf/2105.11260
 
-featured-image: /images/protest-header-2.png
+featured-image: /images/lisa-frank-crowd-01.png
 tags: []
 date: 2021-06-21
 ---

@@ -312,7 +312,7 @@ header .entry-meta {
 		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
 		border-radius: 3px;
 		margin-bottom: 20px;
-		padding: 0px 0px 50px 0px;
+		padding: 0px 0px 0px 0px;
 		overflow: hidden;
 
 	@media #{$toosmall} {
@@ -409,6 +409,10 @@ body {
     text-align: justify;
 }
 
+ul {
+  margin: 0px;
+}
+
 /*--- HEADINGS --------------------------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
@@ -419,21 +423,21 @@ h1, h2, h3, h4, h5, h6 {
         color: lighten($link-color, 0); 
 
         &:visited { 
-            color: lighten($link-color, 0); 
+        color: lighten($link-color, 0); 
         }
 
         &:hover { 
-            color: $highlight-color; 
+        color: $highlight-color; 
         }
 
         &:focus { 
-            outline: thin dotted; 
-            color: darken($link-color, 20);
+        outline: thin dotted; 
+        color: darken($link-color, 20);
         }
 
         &:hover, 
         &:active { 
-            outline: 0; 
+        outline: 0; 
         }
     }
 }
@@ -445,58 +449,7 @@ h1 {
 	}
 }
 
-/*--- CARD GRID ----------------------------------------------------------------*/
-.card-grid{
-  display: flex;
-  align-content: space-between;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.card {
-  /*background: #F1F1F2;*/
-  display: flex;
-  align-items: center;
 
-  border: 1px solid lighten($base-color, 30);
-  // box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.2);
-  // box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
-  border-radius: 3px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  padding: 0px;
-  overflow: hidden;
-  color: lighten($base-color, 30);
-}
-
-.card:hover {
-  color: $highlight-color;
-}
-
-.card-img {
-  display: flex;
-  margin: 0px;
-  height: 100%;
-  align-items: center;
-  // background-color: lighten($base-color, 30);
-  a:link,a:hover,a:visited,a:active{
-    color: lighten($base-color, 30);
-  }
-}
-
-.card-img i {
-  padding: 10px;
-  color: lighten($base-color, 30);
-}
-
-.card-body {
-  height: 100%;
-  flex: 0 1 auto;
-  display: flex;
-  /*flex-direction: column;*/
-  margin: 5px;
-  padding: 5px;
-  align-items: center;
-}
 
 
 /*---- TWO COLUMN LAYOUT -------------------------------------------------------*/
@@ -518,8 +471,10 @@ h1 {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
   flex-grow: 2;
+  background-color: darken($text-color, 20);
+  color: $body-color;
 }
 
 @media #{$toosmall} {
