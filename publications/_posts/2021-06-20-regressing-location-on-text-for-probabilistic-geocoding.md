@@ -12,7 +12,7 @@ doi:
 link-text: PDF
 link-download: /images/publications/regressing_location_on_text_for_probabilistic_geocoding.pdf
 
-featured-image: /images/treasure-map-01.png
+featured-image: /images/treasure-map-02.png
 tags: []
 date: 2021-06-20
 ---
