@@ -11,7 +11,7 @@ pages: 35--41
 link-text: PDF
 link-download: https://www.aclweb.org/anthology/2020.aespen-1.7.pdf
 
-featured-image: /images/forest-header-1.png
+featured-image: /images/forest-fireflies-01.png
 tags: [event extraction, machine learning, security studies & war]
 date: 2020-05-16
 ---
