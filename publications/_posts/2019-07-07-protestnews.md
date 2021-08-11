@@ -11,7 +11,7 @@ volume: 2380
 link-text: PDF
 link-download: http://ceur-ws.org/Vol-2380/paper_69.pdf
 
-featured-image: /images/protest-header-1.png
+featured-image: /images/riot-police-03.png
 tags: [security studies & war, event extraction, machine learning]
 date: 2019-07-07
 ---
