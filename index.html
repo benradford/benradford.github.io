@@ -50,13 +50,14 @@ title: Posts
 
 <article>  
     <!-- POST FEATURED IMAGE -->
-    <div class="featured-image"><a href="{{ site.url }}{{ post.url }}">
+    <div class="featured-image">
+        <div style="height:150px; overflow-y:hidden; "><a href="{{ site.url }}{{ post.url }}">
     {% if post.featured-image == "" or post.featured-image == nil %}
         <img src="/images/default-header.png", style="width:100%">
     {% else %}
-        <img src="{{ post.featured-image }}" style="width:100%"></a>
+        <img src="{{ post.featured-image }}" style="width:100%;"></a>
     {% endif %}
-    </div>
+    </div></div>
     <!-- POST TITLE -->
     <header>
         <h2 class="entry-title">
