@@ -310,8 +310,9 @@ header .entry-meta {
 	article {
 		background-color: #fff;
 		box-shadow: 0px 0px 12px rgba($base-color,0.5);
-        border-color: $text-color;
+        border-color: black; //$text-color;
         border-style: solid;
+        border-width: 1px;
 		border-radius: 10px;
 		margin-bottom: 20px;
 		padding: 0px 0px 0px 0px;
