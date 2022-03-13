@@ -192,7 +192,7 @@ svg:not(:root) {
 /*--- GLOBAL TRANSITION -----------------------------------------------------*/
 
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
-	transition: all 0.2s ease;
+	transition: all 0.1s ease;
 }
 
 /*--- MAIN CONTENT ----------------------------------------------------------*/
@@ -246,7 +246,7 @@ li.entry-title{
 .post-date {
     font-size: 14px;
 	text-transform: none;
-    color: lighten($base-color,0);
+    color: lighten($text-color,0);
 
 	a {
 		color: lighten($base-color,0);
@@ -260,7 +260,7 @@ li.entry-title{
 .post-byline {
     font-size: 14px;
 	text-transform: none;
-    color: lighten($base-color,0);
+    color: lighten($text-color,0);
 
 	a {
 		color: lighten($highlight-color,0);
@@ -309,8 +309,10 @@ header .entry-meta {
 
 	article {
 		background-color: #fff;
-		box-shadow: 0px 0px 24px rgba($base-color,0.5);
-		border-radius: 3px;
+		box-shadow: 0px 0px 12px rgba($base-color,0.5);
+        border-color: $text-color;
+        border-style: solid;
+		border-radius: 10px;
 		margin-bottom: 20px;
 		padding: 0px 0px 0px 0px;
 		overflow: hidden;
@@ -326,7 +328,7 @@ header .entry-meta {
           }
     }
 
-		@media #{$small} {
+	@media #{$small} {
       margin-bottom: 25px;
       padding: 25px 50px;
 
@@ -337,7 +339,7 @@ header .entry-meta {
           }
     }
 
-		@media #{$medium} {
+	@media #{$medium} {
       margin-bottom: 25px;
       padding: 25px 50px;
 
@@ -348,7 +350,7 @@ header .entry-meta {
           }
     }
 
-		@media #{$large} {
+	@media #{$large} {
 			margin-bottom: 25px;
 			padding: 25px 50px;
 
@@ -362,7 +364,7 @@ header .entry-meta {
         a { 
 
             img:hover {
-                filter: brightness(110%);
+                filter: brightness(100%);
             }
         }
 
@@ -473,8 +475,9 @@ h1 {
   padding-top: 15px;
   padding-bottom: 25px;
   flex-grow: 2;
-  background-color: darken($text-color, 20);
-  color: $body-color;
+  background-color: #fff;
+  //background-color: darken($text-color, 20);
+  //color: $body-color;
 }
 
 @media #{$toosmall} {
