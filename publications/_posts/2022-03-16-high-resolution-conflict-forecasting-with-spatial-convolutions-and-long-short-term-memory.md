@@ -12,7 +12,6 @@ doi: 10.1080/03050629.2022.2031182
 link-text: Preprint PDF
 link-download: /images/publications/ViEWS_paper_Radford.pdf
 
-featured-image: /images/missile.jpg
 tags: []
 date: 2022-03-16
 ---
