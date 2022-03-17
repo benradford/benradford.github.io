@@ -10,7 +10,7 @@ pages: 1--20
 doi: 10.1080/03050629.2022.2031182
 
 link-text: Preprint PDF
-link-download: /images/publications/VIEWS_paper_Radford.pdf
+link-download: /images/publications/ViEWS_paper_Radford.pdf
 
 featured-image: /images/missile.jpg
 tags: []
