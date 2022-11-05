@@ -207,6 +207,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 
 .entry-title {
     font-weight: 300;
+    font-size: 20px;
     text-align: left;
     background-repeat: no-repeat;
     background-position: center;
@@ -451,7 +452,30 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	@media #{$medium} {
         font-size: 32px;
+        font-weight: 300;
 	}
+}
+
+h1.section{
+    text-align:center;
+}
+h1.section:before,
+h1.section:after {
+ background-color: $highlight-color;
+ content: "";
+ display: inline-block;
+ height: 1px;
+ position: relative;
+ vertical-align: middle;
+ width: 50%;
+}
+h1.section:before {
+ right: 0.5em;
+ margin-left: -50%;
+}
+h1.section:after {
+ left: 0.5em;
+ margin-right: -50%;
 }
 
 

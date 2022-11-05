@@ -17,13 +17,11 @@ title: Publications
 
     {% if forloop.first %}
     <!--<article>-->
-        <h1 class="entry-title"><a name="papers">Papers</a></h1>
-        <hr>
-      
+        <h1 class="section"><a name="papers">Papers</a></h1>      
         <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}{% if post.subtitle %}: {{post.subtitle}}{% endif %}</a> 
+        <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}{% if post.subtitle %}: {{post.subtitle}}{% endif %}</a> 
         <br> 
              <div class="post-byline">
                 <i>{{ post.venue }}</i> <br>
@@ -34,7 +32,7 @@ title: Publications
                 <div class="post-date">
                     {{ post.date | date: "%B %-d, %Y" }}
                 </div>
-        </li>
+        </li><br>
 
     {% if forloop.last %}
         </ul>
@@ -51,20 +49,18 @@ title: Publications
 
     {% if forloop.first %}
     <!--<article>-->
-        <h1 class="entry-title"><a name="software">Software &amp; Data</a></h1>
-        <hr>
-
+        <h1 class="section"><a name="software">Software &amp; Data</a></h1>
         <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
+        <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
              <div class="post-byline">
                  <i>{{ post.venue }}</i> <br>
                 {{ post.author }} <br>
                 <div class="post-date">
                     {{ post.date | date: "%B %-d, %Y" }}
                 </div>
-        </li>
+        </li><br>
 
     {% if forloop.last %}
         </ul>
@@ -80,20 +76,18 @@ title: Publications
 
     {% if forloop.first %}
     <!--<article>-->
-        <h1 class="entry-title"><a name="projects">Projects &amp; Working Papers</a></h1>
-        <hr>
-
+        <h1 class="section"><a name="projects">Projects &amp; Working Papers</a></h1>
         <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
+        <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
              <div class="post-byline">
                  <i>{{ post.venue }}</i> <br>
                 {{ post.author }} <br>
                 <div class="post-date">
                     {{ post.date | date: "%B %-d, %Y" }}
                 </div>
-        </li>
+        </li><br>
 
     {% if forloop.last %}
         </ul>
@@ -110,13 +104,11 @@ title: Publications
 
     {% if forloop.first %}
     <!--<article>-->
-        <h1 class="entry-title"><a name="blog">Blog Posts</a></h1>
-        <hr>
-
+        <h1 class="section"><a name="blog">Blog Posts</a></h1>
         <ul>
     {% endif %}
 
-        <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
+        <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <br> 
              <div class="post-byline">
                 {% if post.venue %} 
                  <i>{{ post.venue }}</i> <br>
@@ -125,7 +117,7 @@ title: Publications
                 <div class="post-date">
                     {{ post.date | date: "%B %-d, %Y" }}
                 </div>
-        </li>
+        </li><br>
 
     {% if forloop.last %}
         </ul>
