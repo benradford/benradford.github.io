@@ -12,18 +12,18 @@ $caption-font                    : $base-font;
 $code-font                       : monospace;
 $alt-font                        : serif;
 
-$doc-font-size                   : 16;
-$doc-line-height                 : 26;
+$doc-font-size                   : 14px;
+$doc-line-height                 : 21px;
 
 /*--- COLORS ----------------------------------------------------------------*/
 
 $base-color                      : rgba(#222,0.8);
-$body-color                      : #EAEAEA; //#202020;
-$text-color                      : #808080;
+$body-color                      : #D8D8D8; //#202020;
+$text-color                      : #666666;
 $border-color                    : lighten($base-color,60);
 $link-color                      : #808080;
 $link-color-hover                : lighten($link-color,20);
-$highlight-color	             : #00a693; //#F2992E;
+$highlight-color	             : #1572A1; //#F2992E;
 
 /*--- SCREEN SIZES ----------------------------------------------------------*/
 
