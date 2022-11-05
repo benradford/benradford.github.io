@@ -456,11 +456,11 @@ h1 {
 	}
 }
 
-h1.section{
+.section{
     text-align:center;
 }
-h1.section:before,
-h1.section:after {
+.section:before,
+.section:after {
  background-color: $highlight-color;
  content: "";
  display: inline-block;
@@ -469,11 +469,11 @@ h1.section:after {
  vertical-align: middle;
  width: 50%;
 }
-h1.section:before {
+.section:before {
  right: 0.5em;
  margin-left: -50%;
 }
-h1.section:after {
+.section:after {
  left: 0.5em;
  margin-right: -50%;
 }
@@ -491,6 +491,7 @@ h1.section:after {
   flex: 1;
   padding-left: 0px;
   padding-right: 0px;
+  margin-right: 0px;
 
 }
 .col-1-2:last-child {
