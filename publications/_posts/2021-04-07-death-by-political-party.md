@@ -13,7 +13,7 @@ doi: 10.1002/wmh3.435
 link-text: PDF
 link-download: /images/publications/gao_radford_death_by_political_party.pdf
 
-featured-image: /images/usa-pandemic-01.png
+featured-image: /images/hazmat-01.jpeg
 tags: []
 date: 2021-04-07
 ---

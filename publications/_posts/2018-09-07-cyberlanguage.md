@@ -10,7 +10,7 @@ venue: American Statistical Association's Symposium on Data Science and Statisti
 link-text: arXiv:1808.10742
 link-download: https://arxiv.org/abs/1808.10742
 
-featured-image: /images/cyberpunk-hackers-01.png
+featured-image: /images/hackers-01.jpeg
 tags: [cybersecurity incident detection, machine learning]
 date: 2018-09-08
 ---

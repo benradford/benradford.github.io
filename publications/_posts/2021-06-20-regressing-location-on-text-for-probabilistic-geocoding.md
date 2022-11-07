@@ -12,7 +12,7 @@ doi: 10.18653/v1/2021.case-1.8
 link-text: PDF
 link-download: /images/publications/regressing_location_on_text_for_probabilistic_geocoding.pdf
 
-featured-image: /images/alien-topographical-map-01.png
+featured-image: /images/cyberpunk-city-01.jpeg
 tags: []
 date: 2021-06-20
 ---
