@@ -12,7 +12,7 @@ doi: 10.18653/v1/2021.findings-acl.325
 link-text: PDF
 link-download: https://arxiv.org/pdf/2105.11260
 
-featured-image: /images/lisa-frank-crowd-01.png
+featured-image: /images/riot-police-01.jpeg
 tags: []
 date: 2021-06-21
 ---
