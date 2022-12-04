@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {border:1px solid #000;border-collapse:collapse}
+td {width:50px;height:50px;text-align:center;vertical-align:middle;font-size:30px}
+.winner {background-color:green}
+</style>
+</head>
+<body>
+<h1>Tic-Tac-Toe</h1>
+<table>
+<tr><td id="cell-0"></td><td id="cell-1"></td><td id="cell-2"></td></tr>
+<tr><td id="cell-3"></td><td id="cell-4"></td><td id="cell-5"></td></tr>
+<tr><td id="cell-6"></td><td id="cell-7"></td><td id="cell-8"></td></tr>
+</table>
+<script>
+const c=document.querySelectorAll('td');let p="X";
+function gs(){let w="";if(c[0].innerHTML&&c[0].innerHTML===c[1].innerHTML&&c[1].innerHTML===c[2].innerHTML||c[3].innerHTML&&c[3].innerHTML===c[4].innerHTML&&c[4].innerHTML===c[5].innerHTML||c[6].innerHTML&&c[6].innerHTML===c[7].innerHTML&&c[7].innerHTML===c[8].innerHTML||c[0].innerHTML&&c[0].innerHTML===c[3].innerHTML&&c[3].innerHTML===c[6].innerHTML||c[1].innerHTML&&c[1].innerHTML===c[4].innerHTML&&c[4].innerHTML===c[7].innerHTML||c[2].innerHTML&&c[2].innerHTML===c[5].innerHTML&&c[5].innerHTML===c[8].innerHTML||c[0].innerHTML&&c[0].innerHTML===c[4].innerHTML&&c[4].innerHTML===c[8].innerHTML||c[2].innerHTML&&c[2].innerHTML===c[4].innerHTML&&c[4].innerHTML===c[6].innerHTML)w=p;if(w){for(const x of c)if(x.innerHTML===w)x.classList.add('winner');alert(w+' wins!')}else{let e=0;for(const x of c)if(x.innerHTML==="")e++;if(e===0)alert("It's a draw!")}}
+for(const x of c)x.addEventListener('click',function(e){if(e.target.innerHTML===""){e.target.innerHTML=p;if(p==="X")p="O";else p="X";gs();if(e&&p==="O"){let i=[];for(let y=0;y<c.length;y++)if(c[y].innerHTML==="")i.push(y);let r=Math.floor(Math.random()*i.length);let o=i[r];c[o].innerHTML=p;p="X";gs()}}})
+</script>
+</body>
+</html>
