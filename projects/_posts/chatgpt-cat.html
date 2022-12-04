@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: linear-gradient(to right, #ffc3a0, #ffafbd);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  animation: dance 5s linear infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.ear {
+  fill: #ffafbd;
+  stroke: #222;
+  stroke-width: 2;
+}
+
+.eye {
+  fill: white;
+  stroke: #222;
+  stroke-width: 2;
+}
+
+.pupil {
+  fill: #222;
+}
+</style>
+</head>
+<body>
+  <svg class="cat" viewBox="0 0 200 200">
+    <g id="cat">
+      <path d="M100,100 l0,-75 a75,75 0 0,1 75,75 l0,150 a75,75 0 0,1 -75,75" fill="#ffc3a0" stroke="#222" stroke-width="2" />
+      <path class="ear" d="M61,61 a20,20 0 0,1 20,20" />
+      <path class="ear" d="M139,61 a20,20 0 0,1 -20,20" />
+      <circle class="eye" cx="80" cy="110" r="10" />
+      <circle class="pupil" cx="80" cy="110" r="5" />
+      <circle class="eye" cx="120" cy="110" r="10" />
+      <circle class="pupil" cx="120" cy="110" r="5" />
+    </g>
+  </svg>
+</body>
+</html>
