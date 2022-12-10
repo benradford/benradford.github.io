@@ -405,6 +405,7 @@ body {
     font-family: $base-font;
     color: $text-color;
     font-weight: 300;
+  height: 100vh;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -412,6 +413,12 @@ body {
     margin-top: 0px + $doc-line-height;
     font-size: 0px + $doc-font-size;
     text-align: justify;
+  background-image: url("../../images/concrete2.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 ul {
