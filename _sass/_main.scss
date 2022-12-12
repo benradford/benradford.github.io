@@ -486,6 +486,13 @@ h1 {
  margin-right: -50%;
 }
 
+img.rounded {
+  object-fit: cover;
+  width: 512px;
+  height: 512px;
+  border-radius: 50%;
+}
+
 
 /*---- TWO COLUMN LAYOUT -------------------------------------------------------*/
  .grid {
