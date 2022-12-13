@@ -63,13 +63,9 @@ title: Posts
         <div style="height:100px; overflow-y:hidden; position:relative;">
             <a  href="{{ site.url }}{{ post.url }}">
     {% if post.featured-image == "" or post.featured-image == nil %}
-        <div style="display: inline-block; height: 100%; vertical-align: middle;">
         <img src="/images/default-header.png", style="width:100%; vertical-align:middle; position:absolute; margin:auto; bottom:0; top:0">
-        </div>
     {% else %}
-        <div style="display: inline-block; height: 100%; vertical-align: middle;">
         <img src="{{ post.featured-image }}" style="width:100%; vertical-align:middle; position:absolute; margin:auto; bottom:0; top:0">
-        </div>
     {% endif %}
     </a>
     </div></div>
