@@ -12,7 +12,7 @@ doi:
 link-text: PDF
 link-download: https://preview.aclanthology.org/emnlp-22-ingestion/2022.case-1.16/
 
-featured-image: 
+featured-image: images/scifi-01.jpeg
 tags: []
 date: 2022-12-08
 ---
