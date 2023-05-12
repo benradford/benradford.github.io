@@ -163,13 +163,13 @@ svg:not(:root) {
     	text-transform: uppercase;
         //color: $highlight-color;
         //color: $base-color;
-        color: lighten($base-color,30);
+        color: lighten($base-color,100);
         font-weight: 300;
     }
     
     a:hover {
     	text-transform: uppercase;
-        color: $highlight-color;
+        color: $highlight-color-dark;
         //color: lighten($base-color,60);
         font-weight: 300;
     }
@@ -238,7 +238,7 @@ li.entry-title{
 
     h1, a:link, a:visited, a:hover, a:active, div {
     	text-transform: uppercase;
-        color: $highlight-color;
+        color: $highlight-color-dark;
 		//color: lighten($base-color, 60);
 		letter-spacing: 5px;
 	}
@@ -413,7 +413,7 @@ body {
     margin-top: 0px + $doc-line-height;
     font-size: 0px + $doc-font-size;
     text-align: justify;
-  background-image: url("../../images/craiyon-01.png");
+  background-image: url("../../images/craiyon-02.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
