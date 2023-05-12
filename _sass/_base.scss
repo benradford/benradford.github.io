@@ -413,7 +413,7 @@ body {
     margin-top: 0px + $doc-line-height;
     font-size: 0px + $doc-font-size;
     text-align: justify;
-  background-image: url("../../images/puerto-rico-02.jpg");
+  background-image: url("../../images/craiyon-01.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -455,6 +455,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+h1.titleshadow {
+    color: #fff;
+    text-shadow: 0 0 .1em #000;
+}
+h1.title {
+  -webkit-text-fill-color: #ffffffaa;
+  -webkit-background-clip: text;
+}
 
 h1 {
 	@media #{$medium} {
