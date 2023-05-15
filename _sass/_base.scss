@@ -238,9 +238,10 @@ li.entry-title{
 
     h1, a:link, a:visited, a:hover, a:active, div {
     	text-transform: uppercase;
+        font-weight: $doc-font-weight;
         color: white;
 		//color: lighten($base-color, 60);
-		letter-spacing: 5px;
+		letter-spacing: 0.25em;
 	}
 }
 
