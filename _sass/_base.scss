@@ -404,7 +404,7 @@ header .entry-meta {
 body {
     font-family: $base-font;
     color: $text-color;
-    font-weight: 300;
+    font-weight: $doc-font-weight;
   height: 100vh;
 	margin: 0;
 	padding: 0;
