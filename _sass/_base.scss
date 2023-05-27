@@ -163,13 +163,13 @@ svg:not(:root) {
     	text-transform: uppercase;
         //color: $highlight-color;
         //color: $base-color;
-        color: lighten($base-color,30);
+        color: lighten($base-color,100);
         font-weight: 300;
     }
     
     a:hover {
     	text-transform: uppercase;
-        color: $highlight-color;
+        color: $highlight-color-dark;
         //color: lighten($base-color,60);
         font-weight: 300;
     }
@@ -238,9 +238,10 @@ li.entry-title{
 
     h1, a:link, a:visited, a:hover, a:active, div {
     	text-transform: uppercase;
-        color: $highlight-color;
+        font-weight: $doc-font-weight;
+        color: white;
 		//color: lighten($base-color, 60);
-		letter-spacing: 5px;
+		letter-spacing: 0.25em;
 	}
 }
 
@@ -404,7 +405,7 @@ header .entry-meta {
 body {
     font-family: $base-font;
     color: $text-color;
-    font-weight: 300;
+    font-weight: $doc-font-weight;
   height: 100vh;
 	margin: 0;
 	padding: 0;
@@ -413,7 +414,7 @@ body {
     margin-top: 0px + $doc-line-height;
     font-size: 0px + $doc-font-size;
     text-align: justify;
-  background-image: url("../../images/puerto-rico-02.jpg");
+  background-image: url("../../images/craiyon-03.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

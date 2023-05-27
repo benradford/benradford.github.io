@@ -7,13 +7,15 @@ $column-width                    : 950px;
 /*--- TYPOGRAPHY ------------------------------------------------------------*/
 
 $base-font                       : 'Lato', Calibri, Arial, sans-serif;
-$heading-font                    : $base-font;
-$caption-font                    : $base-font;
+$heading-font                    : $base-font, Calibri, Arial, sans-serif;
+$caption-font                    : $base-font, Calibri, Arial, sans-serif;
 $code-font                       : monospace;
 $alt-font                        : serif;
 
-$doc-font-size                   : 14px;
-$doc-line-height                 : 21px;
+$doc-font-size                   : 16px;
+$doc-line-height                 : 24px;
+$doc-font-weight                 : 300;
+$doc-font-thin-weight            : 100;
 
 /*--- COLORS ----------------------------------------------------------------*/
 
@@ -24,6 +26,7 @@ $border-color                    : lighten($base-color,60);
 $link-color                      : #808080;
 $link-color-hover                : lighten($link-color,20);
 $highlight-color	             : #1572A1; //#F2992E;
+$highlight-color-dark            : #73c0e7;
 
 /*--- SCREEN SIZES ----------------------------------------------------------*/
 
