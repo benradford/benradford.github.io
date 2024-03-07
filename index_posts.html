@@ -1,0 +1,122 @@
+---
+layout: post-index
+title: Posts
+---
+<head> 
+{% include head.html %} 
+</head>
+
+{% if paginator.previous_page %}
+{% else %}
+<article style="padding:0px;">
+    <div class="grid" style="display:flex; align-items:stretch">
+
+        <div class="col-1-2 .d-md-none">
+            <div style="
+            display:table-cell;
+            background-color:transparent;
+            float:left;
+            width:100%;
+            height:100%;
+            background-image: url(/images/benradford2.jpg);
+            background-size:cover;
+            background-position:center">
+        </div></div>
+
+        <div class="col-1-2" style="overflow:hidden">
+
+            <h2 class="section">
+                About me
+            </h2>
+            I apply machine learning to problems in political conflict and violence. I am particularly interested in measurement and data collection, forecasting, neural networks, anomaly detection, natural language processing, and cybersecurity. I graduated from Duke University with my Ph.D. in Political Science in 2016. I received my B.A. in Mathematics and International Studies from UNC Asheville in 2010. 
+
+        <h2 class="section">Positions</h2>
+        <center>
+            <div style="width:33%; padding:10px; border-radius: 0px; border: 0px solid #222; float:left">
+			<b>Assistant Professor</b> <br>
+            UNC Charlotte </div>
+            <div style="width:33%; padding:10px; border-radius: 0px; border: 0px solid #222; float:right">
+			<b>President &amp Founder</b> <br>
+            LevelUp Research<br></div>
+            <div style="width:33%; padding:10px; border-radius: 0px; border: 0px solid #222; float:center">
+            <b>Senior Researcher</b><br>
+            Radford Consulting</div>
+        </center>
+
+        <h2 class="section">Collaborations and Consulting</h2><center>
+        Let's work together. <br>
+        benjamin.radford <i class="fas fa-envelope-square"></i> gmail.com</center>
+    </div>
+</div>
+</article>
+{% endif %}
+
+
+{% for post in paginator.posts %}
+
+<article>  
+    <!-- POST FEATURED IMAGE -->
+    <div class="featured-image">
+        <div style="height:100px; overflow-y:hidden; position:relative;">
+            <a  href="{{ site.url }}{{ post.url }}">
+    {% if post.featured-image == "" or post.featured-image == nil %}
+        <img src="/images/default-header.png", style="width:100%; vertical-align:middle; position:absolute; margin:auto; bottom:0; top:0">
+    {% else %}
+        <img src="{{ post.featured-image }}" style="width:100%; vertical-align:middle; position:absolute; margin:auto; bottom:0; top:0">
+    {% endif %}
+    </a>
+    </div></div>
+    <!-- POST TITLE -->
+    <header>
+        <h2 class="entry-title">
+            <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a>
+        </h2>
+<!--         {% if post.subtitle %}
+        <h3 class="entry-subtitle">
+            <a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.subtitle }}</a>
+        </h3>
+        {% endif %} -->
+    </header>
+            <!-- POST BYLINE -->
+            <div class="post-byline">
+                <i>{{ post.venue }}</i> <br>
+                {% if post.link-download %}
+                    Download: <a href="{{ post.link-download }}">{{ post.link-text }}</a>
+                {% endif %}
+            </div>
+            <!-- POST DATE -->
+            <div class="post-date">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </div>
+
+
+    <!-- POST CONTENT -->
+<!--     <hr>
+    <div class="entry-content">
+        {{ post.excerpt }}
+    </div>  -->
+
+    <!--- DIVIDING LINE -->
+<!--     <hr> -->
+    <!-- POST TAGS -->
+<!--     <div class="inline-tags">
+        <span>
+        {% for cat in post.categories %}
+            <a href="/{{cat}}">{{ cat | capitalize }}&nbsp;&nbsp;&nbsp</a>
+        {% endfor %}
+        {% for tag in post.tags %}
+            <a href="/tags/#{{tag}}">#{{ tag }}&nbsp;&nbsp;&nbsp;</a>
+        {% endfor %}
+        </span>
+    </div> -->
+
+    
+</article>
+{% endfor %}
+
+<div class="pagination">
+<center>
+{% include pagination.html %}
+</center>
+</div>
+
