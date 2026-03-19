@@ -1,0 +1,45 @@
+/*--- PAGE ------------------------------------------------------------------*/
+
+$feature-image-height            : 400px; // min 150px recommended
+$front-page-feature-image-height : 300px; // min 150px recommended
+$column-width                    : 900px;
+
+/*--- TYPOGRAPHY ------------------------------------------------------------*/
+
+$base-font                       : 'EB Garamond', Georgia, 'Times New Roman', serif;
+$heading-font                    : 'Playfair Display', 'Times New Roman', serif;
+$display-font                    : 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+$caption-font                    : $base-font;
+$code-font                       : 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+$alt-font                        : serif;
+
+$doc-font-size                   : 17px;
+$doc-line-height                 : 28px;
+$doc-font-weight                 : 400;
+$doc-font-thin-weight            : 300;
+
+/*--- COLORS ----------------------------------------------------------------*/
+/* Midcentury modern palette: mustard, teal, burnt orange, olive, warm neutrals */
+
+$nav-bg                          : #2C2926;
+$body-color                      : #F5F2ED;
+$surface-color                   : #FEFCF7;
+
+$base-color                      : #332E28;
+$text-color                      : #332E28;
+$secondary-text                  : #8A8278;
+$border-color                    : #DDD5C6;
+
+$link-color                      : #1B7A7A;  // midcentury teal
+$link-color-hover                : #145C5C;
+$highlight-color                 : #1B7A7A;
+$highlight-color-dark            : #B8892A;  // mustard gold
+$accent-color                    : #B8892A;  // mustard gold
+$accent-vivid                    : #C85A3A;  // burnt orange
+
+/*--- SCREEN SIZES ----------------------------------------------------------*/
+
+$toosmall                        : "only screen and (max-width: 30em)";
+$small                           : "only screen and (min-width: 30em)";
+$medium                          : "only screen and (min-width: 48em)";
+$large                           : "only screen and (min-width: 62.5em)";

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="BJR monogram">
+  <defs>
+    <clipPath id="clip">
+      <circle cx="50" cy="50" r="50"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="50" cy="50" r="50" fill="#1C1914"/>
+
+  <g clip-path="url(#clip)">
+    <!-- Starburst rays — atomic age motif -->
+    <g stroke="#A07048" stroke-width="1.4" opacity="0.38">
+      <line x1="50" y1="50" x2="50" y2="-5"/>
+      <line x1="50" y1="50" x2="105" y2="-5"/>
+      <line x1="50" y1="50" x2="105" y2="50"/>
+      <line x1="50" y1="50" x2="105" y2="105"/>
+      <line x1="50" y1="50" x2="50" y2="105"/>
+      <line x1="50" y1="50" x2="-5" y2="105"/>
+      <line x1="50" y1="50" x2="-5" y2="50"/>
+      <line x1="50" y1="50" x2="-5" y2="-5"/>
+    </g>
+    <!-- Secondary rays (rotated 22.5°) -->
+    <g stroke="#A07048" stroke-width="0.9" opacity="0.28">
+      <line x1="50" y1="50" x2="73" y2="-3"/>
+      <line x1="50" y1="50" x2="103" y2="27"/>
+      <line x1="50" y1="50" x2="103" y2="73"/>
+      <line x1="50" y1="50" x2="73" y2="103"/>
+      <line x1="50" y1="50" x2="27" y2="103"/>
+      <line x1="50" y1="50" x2="-3" y2="73"/>
+      <line x1="50" y1="50" x2="-3" y2="27"/>
+      <line x1="50" y1="50" x2="27" y2="-3"/>
+    </g>
+
+    <!-- Outer elliptical orbit — atomic motif -->
+    <ellipse cx="50" cy="50" rx="42" ry="18"
+             fill="none" stroke="#C4503A" stroke-width="2.4" opacity="0.62"
+             transform="rotate(-30 50 50)"/>
+    <ellipse cx="50" cy="50" rx="42" ry="18"
+             fill="none" stroke="#C4503A" stroke-width="2.4" opacity="0.62"
+             transform="rotate(30 50 50)"/>
+
+    <!-- Horizontal accent bar -->
+    <line x1="12" y1="50" x2="38" y2="50" stroke="#A07048" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="62" y1="50" x2="88" y2="50" stroke="#A07048" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Diamond endpoints on the bar -->
+    <rect x="9" y="48" width="4" height="4" fill="#C4503A" opacity="0.7" transform="rotate(45 11 50)"/>
+    <rect x="87" y="48" width="4" height="4" fill="#C4503A" opacity="0.7" transform="rotate(45 89 50)"/>
+
+    <!-- Inner circle accent -->
+    <circle cx="50" cy="50" r="28" fill="none" stroke="#F5F2ED" stroke-width="0.4" opacity="0.12"/>
+  </g>
+
+  <!-- BJR monogram -->
+  <text x="50" y="51"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        font-family="'Playfair Display', 'Times New Roman', Georgia, serif"
+        font-size="22"
+        font-weight="600"
+        fill="#F5F2ED"
+        letter-spacing="3">BJR</text>
+</svg>

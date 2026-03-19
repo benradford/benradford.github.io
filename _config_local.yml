@@ -1,0 +1,6 @@
+# Local overrides — disables remote_theme, uses local gem instead.
+# Usage: bundle exec jekyll serve --config _config.yml,_config_local.yml
+remote_theme: null
+theme: mcm-academic-jekyll-theme
+plugins:
+  - jekyll-paginate

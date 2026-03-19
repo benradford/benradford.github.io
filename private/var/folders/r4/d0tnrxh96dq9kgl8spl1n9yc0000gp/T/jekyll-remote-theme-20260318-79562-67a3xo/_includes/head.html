@@ -1,4 +1,6 @@
 <meta charset="utf-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
@@ -56,15 +58,30 @@
 {% endif %}
 
 <!-- MathJax -->
-<!-- <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
+<script>
+window.MathJax = {
+  startup: {
+    ready() {
+      // Kramdown parses $$...$$ as inline \(...\) when it immediately follows
+      // an HTML block tag without a blank line. Fix: promote any <p> whose
+      // entire content is a single \(...\) expression to display math \[...\].
+      document.querySelectorAll('p').forEach(function(p) {
+        const html = p.innerHTML.trim();
+        if (html.startsWith('\\(') && html.endsWith('\\)')) {
+          p.innerHTML = '\\[' + html.slice(2, -2) + '\\]';
+        }
+      });
+      MathJax.startup.defaultReady();
+    }
+  },
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
     processEscapes: true
   }
-});
+};
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 
 <link rel="stylesheet" href="/assets/fontawesome-free-5.15.1-web/css/all.css">
@@ -73,6 +90,6 @@ MathJax.Hub.Config({
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 

@@ -11,11 +11,12 @@ gems:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
-plugins: 
+remote_theme: benradford/mcm-academic-jekyll-theme@main
+plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
 paginate_path: "/posts/page:num"
 sass:
-  sass_dir: _sass
   style: compressed
 
 permalink: /:categories/:year-:month-:day/:title.html

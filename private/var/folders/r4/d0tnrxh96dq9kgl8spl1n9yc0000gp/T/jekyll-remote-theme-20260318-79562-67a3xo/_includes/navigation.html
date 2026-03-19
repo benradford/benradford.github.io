@@ -1,0 +1,70 @@
+
+<div class="site-header">
+    <div class="site-title-block">
+        <a href="/" class="site-logo-link" aria-label="Home">
+            <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                    <clipPath id="nav-clip">
+                        <circle cx="50" cy="50" r="50"/>
+                    </clipPath>
+                </defs>
+                <!-- Background -->
+                <circle cx="50" cy="50" r="50" fill="#2C2926"/>
+                <g clip-path="url(#nav-clip)">
+                    <!-- Atomic orbit ellipses -->
+                    <ellipse cx="50" cy="50" rx="44" ry="16"
+                             fill="none" stroke="#C85A3A" stroke-width="2.0" opacity="0.65"
+                             transform="rotate(0 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="44" ry="16"
+                             fill="none" stroke="#1B7A7A" stroke-width="2.0" opacity="0.55"
+                             transform="rotate(60 50 50)"/>
+                    <ellipse cx="50" cy="50" rx="44" ry="16"
+                             fill="none" stroke="#B8892A" stroke-width="2.0" opacity="0.55"
+                             transform="rotate(-60 50 50)"/>
+
+                    <!-- Starburst rays from center -->
+                    <g stroke="#F2EBDB" stroke-width="0.8" opacity="0.15">
+                        <line x1="50" y1="50" x2="50" y2="10"/>
+                        <line x1="50" y1="50" x2="50" y2="90"/>
+                        <line x1="50" y1="50" x2="10" y2="50"/>
+                        <line x1="50" y1="50" x2="90" y2="50"/>
+                        <line x1="50" y1="50" x2="22" y2="22"/>
+                        <line x1="50" y1="50" x2="78" y2="78"/>
+                        <line x1="50" y1="50" x2="78" y2="22"/>
+                        <line x1="50" y1="50" x2="22" y2="78"/>
+                    </g>
+
+                    <!-- Nucleus dot -->
+                    <circle cx="50" cy="50" r="4" fill="#C85A3A" opacity="0.7"/>
+                    <circle cx="50" cy="50" r="2" fill="#F2EBDB" opacity="0.5"/>
+
+                    <!-- Diamond accent at cardinal points -->
+                    <rect x="48" y="6" width="4" height="4" fill="#B8892A" opacity="0.45" transform="rotate(45 50 8)"/>
+                    <rect x="48" y="90" width="4" height="4" fill="#B8892A" opacity="0.45" transform="rotate(45 50 92)"/>
+                    <rect x="6" y="48" width="4" height="4" fill="#B8892A" opacity="0.45" transform="rotate(45 8 50)"/>
+                    <rect x="90" y="48" width="4" height="4" fill="#B8892A" opacity="0.45" transform="rotate(45 92 50)"/>
+                </g>
+                <!-- Initials -->
+                <text x="50" y="51"
+                      text-anchor="middle"
+                      dominant-baseline="middle"
+                      font-family="'Josefin Sans', 'Helvetica Neue', Arial, sans-serif"
+                      font-size="19"
+                      font-weight="600"
+                      fill="#F2EBDB"
+                      letter-spacing="4">BJR</text>
+            </svg>
+        </a>
+        <h1 class="site-title"><a href="/">{{ site.title }}</a></h1>
+    </div>
+    <nav class="site-nav">
+        <ul class="navigation-bar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/collaborators.html">Collaborators</a></li>
+            <li><a href="/images/radford_cv.pdf" target="#">CV</a></li>
+            <li class="nav-icon"><a href="https://www.github.com/benradford"><i class='fab fa-github-alt fa-1x'></i></a></li>
+            <li class="nav-icon"><a href="https://www.researchgate.net/profile/Benjamin_Radford"><i class='ai ai-researchgate ai-1x'></i></a></li>
+            <li class="nav-icon"><a href="https://scholar.google.com/citations?user=0K05-rwAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar ai-1x"></i></a></li>
+        </ul>
+    </nav>
+</div>
